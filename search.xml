@@ -4,6 +4,12 @@
   
     
     <entry>
+      <title><![CDATA[test]]></title>
+      <url>2324268086.github.io/2017/01/26/test/</url>
+      <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">测试页面</span><br></pre></td></tr></table></figure>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>2324268086.github.io/2017/01/26/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to the xiaojian of the home page</p>

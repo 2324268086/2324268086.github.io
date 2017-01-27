@@ -19,9 +19,12 @@
       <title><![CDATA[Hello World]]></title>
       <url>2324268086.github.io/2017/01/26/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to the xiaojian of the home page</p>
-<h2 id="欢迎来到小贱的主页"><a href="#欢迎来到小贱的主页" class="headerlink" title="欢迎来到小贱的主页"></a>欢迎来到小贱的主页</h2><h3 id="About-me"><a href="#About-me" class="headerlink" title="About me"></a>About me</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>Use the <code>printf()</code> function.</p>
-<p><img src="/path/to/img.jpg" alt="Alt text" title="Optional title"></p>
+<h2 id="欢迎来到小贱的主页"><a href="#欢迎来到小贱的主页" class="headerlink" title="欢迎来到小贱的主页"></a>欢迎来到小贱的主页</h2><h3 id="About-me"><a href="#About-me" class="headerlink" title="About me"></a>About me</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">home</span></span>()&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/img/233.jpg" alt="Alt text" title="233"><br><a id="more"></a></p>
+<p><a href="http://syxiaqj.github.io/2014/02/23/write-blog-with-markdown/" target="_blank" rel="external">文字</a></p>
+<ul>
+<li>标题<br>-2<br>-33</li>
+</ul>
 ]]></content>
     </entry>
     

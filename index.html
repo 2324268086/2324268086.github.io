@@ -183,11 +183,11 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="mailto:2324268086@qq.com" title="Email"></a>
-                            
                                 <a class="fa GitHub" href="#" title="GitHub"></a>
                             
-                                <a class="fa QQ" href="/2324268086" title="QQ"></a>
+                                <a class="fa CSDN" href="http://blog.csdn.net/a2324268086?viewmode=list" title="CSDN"></a>
+                            
+                                <a class="fa QQ" href="tencent://QQInterLive/?Cmd=2&Uin=2324268086" title="QQ"></a>
                             
                         </ul>
                     </nav>
@@ -263,11 +263,11 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="mailto:2324268086@qq.com" title="Email"></a>
-                            
                                 <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
                             
-                                <a class="fa QQ" target="_blank" href="/2324268086" title="QQ"></a>
+                                <a class="fa CSDN" target="_blank" href="http://blog.csdn.net/a2324268086?viewmode=list" title="CSDN"></a>
+                            
+                                <a class="fa QQ" target="_blank" href="tencent://QQInterLive/?Cmd=2&Uin=2324268086" title="QQ"></a>
                             
                         </ul>
             </nav>
@@ -284,6 +284,15 @@
       <time datetime="2017-01-26T02:32:08.000Z" itemprop="datePublished">2017-01-26</time>
 </a>
 
+ 
+    <a href="/2017/01/26/test/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+            <span class="ds-thread-count"  data-thread-key="2017/01/26/test/" ></span>
+        
+        
+    </a>
 
     </div>
   
@@ -339,6 +348,15 @@
       <time datetime="2017-01-26T01:30:01.075Z" itemprop="datePublished">2017-01-26</time>
 </a>
 
+ 
+    <a href="/2017/01/26/hello-world/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+            <span class="ds-thread-count"  data-thread-key="2017/01/26/hello-world/" ></span>
+        
+        
+    </a>
 
     </div>
   
@@ -443,6 +461,31 @@
         })
     </script>
 
+
+    
+        <script>
+            if ($(".left-col").is(":visible")) {
+                var duoshuoQuery = {short_name:"null"};
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'http://static.duoshuo.com/embed.js';
+                    s.async = true; s.charset = 'UTF-8';
+                    (d.head || d.body).appendChild(s);
+                })();
+
+                $(document).ready(function(){
+                    var $duoshuoCount = $(".ds-thread-count");
+                    $duoshuoCount.bind("DOMNodeInserted", function(e) {
+                        var num = $(this).text().replace(/[^0-9]/ig,"");
+                        $(this).siblings(".count-comment").text(num);
+                        $(this).remove();
+                    })
+                })
+            }
+        </script>
+    
+
+     
 
 
 

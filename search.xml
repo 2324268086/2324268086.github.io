@@ -6,7 +6,13 @@
     <entry>
       <title><![CDATA[test]]></title>
       <url>2324268086.github.io/2017/01/26/test/</url>
-      <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">测试页面</span><br></pre></td></tr></table></figure>]]></content>
+      <content type="html"><![CDATA[<p>cateories:</p>
+<ul>
+<li>android</li>
+<li>java<br>tags:</li>
+<li>小tip</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">测试页面</span><br></pre></td></tr></table></figure>]]></content>
     </entry>
     
     <entry>

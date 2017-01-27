@@ -77,7 +77,9 @@
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
 
 
 
@@ -452,6 +454,23 @@
         }
     
 </script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "->" + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "" + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>

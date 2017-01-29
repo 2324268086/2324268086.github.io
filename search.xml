@@ -4,6 +4,28 @@
   
     
     <entry>
+      <title><![CDATA[directx数学基础2]]></title>
+      <url>2324268086.github.io/2017/01/28/directx%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%802/</url>
+      <content type="html"><![CDATA[<ol>
+<li>向量（vector）：在游戏中通常表示位置，移位，方向，速度和作用力（请看directx数学基础1）</li>
+<li>矩阵（matrix）：在游戏中提供高效的变换方式，几何变换与坐标变换</li>
+</ol>
+<h2 id="矩阵（矩形实数数组）"><a href="#矩阵（矩形实数数组）" class="headerlink" title="矩阵（矩形实数数组）"></a>矩阵（矩形实数数组）</h2><a id="more"></a>
+<h3 id="矩阵乘法（a中的行向量的维数必须与b中的列向量的维数相同）"><a href="#矩阵乘法（a中的行向量的维数必须与b中的列向量的维数相同）" class="headerlink" title="矩阵乘法（a中的行向量的维数必须与b中的列向量的维数相同）"></a>矩阵乘法（a中的行向量的维数必须与b中的列向量的维数相同）</h3><p>例如： <img src="/img/directx数学基础_13.png" alt=""></p>
+<h3 id="转置矩阵（transpose：-对一个矩阵的行和列进行互换）"><a href="#转置矩阵（transpose：-对一个矩阵的行和列进行互换）" class="headerlink" title="转置矩阵（transpose： 对一个矩阵的行和列进行互换）"></a>转置矩阵（transpose： 对一个矩阵的行和列进行互换）</h3><p>标记为T</p>
+<h3 id="单位矩阵（identity：-除了对角线上的元素为1外，其他元素均为0）"><a href="#单位矩阵（identity：-除了对角线上的元素为1外，其他元素均为0）" class="headerlink" title="单位矩阵（identity： 除了对角线上的元素为1外，其他元素均为0）"></a>单位矩阵（identity： 除了对角线上的元素为1外，其他元素均为0）</h3><p>单位矩阵相当于1 <img src="/img/directx数学基础_14.png" alt=""></p>
+<h3 id="逆矩阵（inverse：-乘法的逆运算（矩阵除法运算））"><a href="#逆矩阵（inverse：-乘法的逆运算（矩阵除法运算））" class="headerlink" title="逆矩阵（inverse： 乘法的逆运算（矩阵除法运算））"></a>逆矩阵（inverse： 乘法的逆运算（矩阵除法运算））</h3><p>性质： <img src="/img/directx数学基础_15.png" alt=""></p>
+<h3 id="基本变换（4x4矩阵与向量-矩阵乘积来描述变换）"><a href="#基本变换（4x4矩阵与向量-矩阵乘积来描述变换）" class="headerlink" title="基本变换（4x4矩阵与向量-矩阵乘积来描述变换）"></a>基本变换（4x4矩阵与向量-矩阵乘积来描述变换）</h3><p>齐次坐标(homogeneous coordinate)： 用于表示3D向量或点的四元组<br>通过它的第4个坐标分量w（控制平移）来判断：<br><img src="/img/directx数学基础_16.png" alt=""></p>
+<p>缩放：<br><img src="/img/directx数学基础_17.png" alt=""> <img src="/img/directx数学基础_18.png" alt=""><br>几何体沿 x、y、z 轴的缩放<br>例子：<br>假设我们通过一个最小点(−4,−4,0)和一个最大点(4,4,0)来定义一个正方形，我们希望<br>将正方形沿 x 轴缩小 0.5 倍，沿 y 轴放大 2.0 倍，z 轴保持不变则对应的缩放矩阵为：<br><img src="/img/directx数学基础_19.png" alt=""><br>再对正方形进行缩放（变换），将正方形的两个点与该矩阵相乘<br><img src="/img/directx数学基础_20.png" alt=""><br>结果<br><img src="/img/directx数学基础_21.png" alt=""></p>
+<p>旋转：<br>绕n（x,y,z）轴旋转的’万能’旋转矩阵<br><img src="/img/directx数学基础_22.png" alt=""></p>
+<p>正交矩阵(orthogonal matrix): 行向量都是相互垂直且为单位长度<br>性质：<br>它的逆矩阵与它的转置矩阵相等 <img src="/img/directx数学基础_23.png" alt=""></p>
+<p>绕x，y，z轴（n=（1,0,0） n=（0,1,0） n=（0,0,1））旋转的矩阵<br><img src="/img/directx数学基础_24.png" alt=""></p>
+<p>例子：<br>假设我们通过一个最小点(−1,0,−1)和一个最大点(1,0,1)来定义一个正方形。让正方形<br>绕着 y 轴的顺时针方向旋转−30º（即，逆时针方向旋转 30º）。则y轴旋转矩阵为：<br><img src="/img/directx数学基础_25.png" alt=""><br>再对正方形进行旋转（变换），将正方形的两个点与该矩阵相乘：<br><img src="/img/directx数学基础_26.png" alt=""><br>结果<br><img src="/img/directx数学基础_27.png" alt=""></p>
+<p>平移：<br><img src="/img/directx数学基础_28.png" alt=""><br>平移矩阵的逆矩阵如下：<br><img src="/img/directx数学基础_29.png" alt=""><br>例子：<br>假设我们通过一个最小点(−8,2,0)和一个最大点(−2,8,0)来定义一个正方形。让正方形<br>沿x轴平移12，沿y轴平移−10，z轴保持不变。则对应的平移矩阵如下：<br><img src="/img/directx数学基础_30.png" alt=""><br>再对正方形进行平移（变换），将正方形的两个点与该矩阵相乘：<br><img src="/img/directx数学基础_31.png" alt=""><br>结果<br><img src="/img/directx数学基础_32.png" alt=""></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[directx数学基础1]]></title>
       <url>2324268086.github.io/2017/01/28/directx%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</url>
       <content type="html"><![CDATA[<ol>

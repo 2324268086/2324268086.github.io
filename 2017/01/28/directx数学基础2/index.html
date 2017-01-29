@@ -15,38 +15,46 @@
 
 
 
-<meta name="description" content="向量（vector）：在游戏中通常表示位置，移位，方向，速度和作用力
-矩阵（matrix）：在游戏中提供高效的变换方式，几何变换与坐标变换（请看directx数学基础2）
+<meta name="description" content="向量（vector）：在游戏中通常表示位置，移位，方向，速度和作用力（请看directx数学基础1）
+矩阵（matrix）：在游戏中提供高效的变换方式，几何变换与坐标变换
 
-向量（同具有大小和方向的物理量）">
+矩阵（矩形实数数组）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="directx数学基础1">
-<meta property="og:url" content="2324268086.github.io/2017/01/28/directx数学基础/index.html">
+<meta property="og:title" content="directx数学基础2">
+<meta property="og:url" content="2324268086.github.io/2017/01/28/directx数学基础2/index.html">
 <meta property="og:site_name" content="小贱's Blog">
-<meta property="og:description" content="向量（vector）：在游戏中通常表示位置，移位，方向，速度和作用力
-矩阵（matrix）：在游戏中提供高效的变换方式，几何变换与坐标变换（请看directx数学基础2）
+<meta property="og:description" content="向量（vector）：在游戏中通常表示位置，移位，方向，速度和作用力（请看directx数学基础1）
+矩阵（matrix）：在游戏中提供高效的变换方式，几何变换与坐标变换
 
-向量（同具有大小和方向的物理量）">
-<meta property="og:image" content="2324268086.github.io/img/directx数学基础_1.png">
-<meta property="og:image" content="2324268086.github.io/img/directx数学基础_2.png">
-<meta property="og:image" content="2324268086.github.io/img/directx数学基础_3.png">
-<meta property="og:image" content="2324268086.github.io/img/directx数学基础_4.png">
-<meta property="og:image" content="2324268086.github.io/img/directx数学基础_5.png">
-<meta property="og:image" content="2324268086.github.io/img/directx数学基础_6.png">
-<meta property="og:image" content="2324268086.github.io/img/directx数学基础_7.png">
-<meta property="og:image" content="2324268086.github.io/img/directx数学基础_9.png">
-<meta property="og:image" content="2324268086.github.io/img/directx数学基础_8.png">
-<meta property="og:image" content="2324268086.github.io/img/directx数学基础_10.png">
-<meta property="og:image" content="2324268086.github.io/img/directx数学基础_11.png">
-<meta property="og:image" content="2324268086.github.io/img/directx数学基础_12.png">
-<meta property="og:updated_time" content="2017-01-28T04:05:05.395Z">
+矩阵（矩形实数数组）">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_13.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_14.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_15.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_16.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_17.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_18.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_19.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_20.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_21.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_22.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_23.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_24.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_25.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_26.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_27.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_28.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_29.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_30.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_31.png">
+<meta property="og:image" content="2324268086.github.io/img/directx数学基础_32.png">
+<meta property="og:updated_time" content="2017-01-29T05:49:44.827Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="directx数学基础1">
-<meta name="twitter:description" content="向量（vector）：在游戏中通常表示位置，移位，方向，速度和作用力
-矩阵（matrix）：在游戏中提供高效的变换方式，几何变换与坐标变换（请看directx数学基础2）
+<meta name="twitter:title" content="directx数学基础2">
+<meta name="twitter:description" content="向量（vector）：在游戏中通常表示位置，移位，方向，速度和作用力（请看directx数学基础1）
+矩阵（matrix）：在游戏中提供高效的变换方式，几何变换与坐标变换
 
-向量（同具有大小和方向的物理量）">
-<meta name="twitter:image" content="2324268086.github.io/img/directx数学基础_1.png">
+矩阵（矩形实数数组）">
+<meta name="twitter:image" content="2324268086.github.io/img/directx数学基础_13.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -78,7 +86,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>directx数学基础1 | 小贱&#39;s Blog</title>
+<title>directx数学基础2 | 小贱&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -301,11 +309,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-directx数学基础" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-directx数学基础2" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/01/28/directx数学基础/" class="article-date">
-      <time datetime="2017-01-28T01:42:53.000Z" itemprop="datePublished">2017-01-28</time>
+      <a href="/2017/01/28/directx数学基础2/" class="article-date">
+      <time datetime="2017-01-28T04:11:13.000Z" itemprop="datePublished">2017-01-28</time>
 </a>
 
 
@@ -320,7 +328,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      directx数学基础1
+      directx数学基础2
     </h1>
   
 
@@ -347,21 +355,21 @@
       
           
         <ol>
-<li>向量（vector）：在游戏中通常表示位置，移位，方向，速度和作用力</li>
-<li>矩阵（matrix）：在游戏中提供高效的变换方式，几何变换与坐标变换（请看directx数学基础2）</li>
+<li>向量（vector）：在游戏中通常表示位置，移位，方向，速度和作用力（请看directx数学基础1）</li>
+<li>矩阵（matrix）：在游戏中提供高效的变换方式，几何变换与坐标变换</li>
 </ol>
-<h2 id="向量（同具有大小和方向的物理量）"><a href="#向量（同具有大小和方向的物理量）" class="headerlink" title="向量（同具有大小和方向的物理量）"></a>向量（同具有大小和方向的物理量）</h2><a id="more"></a>
-<h3 id="坐标系（directx为左手坐标系）"><a href="#坐标系（directx为左手坐标系）" class="headerlink" title="坐标系（directx为左手坐标系）"></a>坐标系（directx为左手坐标系）</h3><p><img src="/img/directx数学基础_1.png" alt=""><br>看上去就像图中z向量相反</p>
-<h3 id="向量长度（length）"><a href="#向量长度（length）" class="headerlink" title="向量长度（length）"></a>向量长度（length）</h3><p>几何学： 有向线段的长度<br><img src="/img/directx数学基础_2.png" alt=""></p>
-<p>代数方式： 毕达哥拉斯定理（’不规则’勾股定理）<br><img src="/img/directx数学基础_3.png" alt=""></p>
-<h3 id="单位向量（normalize：-不关心向量的长度，只希望用向量来表示一个单纯的方向）"><a href="#单位向量（normalize：-不关心向量的长度，只希望用向量来表示一个单纯的方向）" class="headerlink" title="单位向量（normalize： 不关心向量的长度，只希望用向量来表示一个单纯的方向）"></a>单位向量（normalize： 不关心向量的长度，只希望用向量来表示一个单纯的方向）</h3><p>进行规范化处理： <img src="/img/directx数学基础_4.png" alt=""></p>
-<p>验证是否为单位向量？只要计算单位向量u的长度就行<br><img src="/img/directx数学基础_5.png" alt=""></p>
-<h3 id="点积（dot：-两个向量对应分量的乘积之和）"><a href="#点积（dot：-两个向量对应分量的乘积之和）" class="headerlink" title="点积（dot： 两个向量对应分量的乘积之和）"></a>点积（dot： 两个向量对应分量的乘积之和）</h3><p>代数方式： <img src="/img/directx数学基础_6.png" alt=""></p>
-<p>余弦定理： <img src="/img/directx数学基础_7.png" alt=""><br>结果代入cosx的反函数（acos）即可算出度数，</p>
-<p>例如： <img src="/img/directx数学基础_9.png" alt=""></p>
-<p>几何性质：<br><img src="/img/directx数学基础_8.png" alt=""></p>
-<h3 id="叉积（cross：-两个3D向量计算叉积，得到垂直于两个向量的第3个向量-）"><a href="#叉积（cross：-两个3D向量计算叉积，得到垂直于两个向量的第3个向量-）" class="headerlink" title="叉积（cross： 两个3D向量计算叉积，得到垂直于两个向量的第3个向量 ）"></a>叉积（cross： 两个3D向量计算叉积，得到垂直于两个向量的第3个向量 ）</h3><p>代数方式： <img src="/img/directx数学基础_10.png" alt=""><br>例如： <img src="/img/directx数学基础_11.png" alt=""></p>
-<p>正弦定理： <img src="/img/directx数学基础_12.png" alt=""><br>同理结果代入asin即可算出度数，</p>
+<h2 id="矩阵（矩形实数数组）"><a href="#矩阵（矩形实数数组）" class="headerlink" title="矩阵（矩形实数数组）"></a>矩阵（矩形实数数组）</h2><a id="more"></a>
+<h3 id="矩阵乘法（a中的行向量的维数必须与b中的列向量的维数相同）"><a href="#矩阵乘法（a中的行向量的维数必须与b中的列向量的维数相同）" class="headerlink" title="矩阵乘法（a中的行向量的维数必须与b中的列向量的维数相同）"></a>矩阵乘法（a中的行向量的维数必须与b中的列向量的维数相同）</h3><p>例如： <img src="/img/directx数学基础_13.png" alt=""></p>
+<h3 id="转置矩阵（transpose：-对一个矩阵的行和列进行互换）"><a href="#转置矩阵（transpose：-对一个矩阵的行和列进行互换）" class="headerlink" title="转置矩阵（transpose： 对一个矩阵的行和列进行互换）"></a>转置矩阵（transpose： 对一个矩阵的行和列进行互换）</h3><p>标记为T</p>
+<h3 id="单位矩阵（identity：-除了对角线上的元素为1外，其他元素均为0）"><a href="#单位矩阵（identity：-除了对角线上的元素为1外，其他元素均为0）" class="headerlink" title="单位矩阵（identity： 除了对角线上的元素为1外，其他元素均为0）"></a>单位矩阵（identity： 除了对角线上的元素为1外，其他元素均为0）</h3><p>单位矩阵相当于1 <img src="/img/directx数学基础_14.png" alt=""></p>
+<h3 id="逆矩阵（inverse：-乘法的逆运算（矩阵除法运算））"><a href="#逆矩阵（inverse：-乘法的逆运算（矩阵除法运算））" class="headerlink" title="逆矩阵（inverse： 乘法的逆运算（矩阵除法运算））"></a>逆矩阵（inverse： 乘法的逆运算（矩阵除法运算））</h3><p>性质： <img src="/img/directx数学基础_15.png" alt=""></p>
+<h3 id="基本变换（4x4矩阵与向量-矩阵乘积来描述变换）"><a href="#基本变换（4x4矩阵与向量-矩阵乘积来描述变换）" class="headerlink" title="基本变换（4x4矩阵与向量-矩阵乘积来描述变换）"></a>基本变换（4x4矩阵与向量-矩阵乘积来描述变换）</h3><p>齐次坐标(homogeneous coordinate)： 用于表示3D向量或点的四元组<br>通过它的第4个坐标分量w（控制平移）来判断：<br><img src="/img/directx数学基础_16.png" alt=""></p>
+<p>缩放：<br><img src="/img/directx数学基础_17.png" alt=""> <img src="/img/directx数学基础_18.png" alt=""><br>几何体沿 x、y、z 轴的缩放<br>例子：<br>假设我们通过一个最小点(−4,−4,0)和一个最大点(4,4,0)来定义一个正方形，我们希望<br>将正方形沿 x 轴缩小 0.5 倍，沿 y 轴放大 2.0 倍，z 轴保持不变则对应的缩放矩阵为：<br><img src="/img/directx数学基础_19.png" alt=""><br>再对正方形进行缩放（变换），将正方形的两个点与该矩阵相乘<br><img src="/img/directx数学基础_20.png" alt=""><br>结果<br><img src="/img/directx数学基础_21.png" alt=""></p>
+<p>旋转：<br>绕n（x,y,z）轴旋转的’万能’旋转矩阵<br><img src="/img/directx数学基础_22.png" alt=""></p>
+<p>正交矩阵(orthogonal matrix): 行向量都是相互垂直且为单位长度<br>性质：<br>它的逆矩阵与它的转置矩阵相等 <img src="/img/directx数学基础_23.png" alt=""></p>
+<p>绕x，y，z轴（n=（1,0,0） n=（0,1,0） n=（0,0,1））旋转的矩阵<br><img src="/img/directx数学基础_24.png" alt=""></p>
+<p>例子：<br>假设我们通过一个最小点(−1,0,−1)和一个最大点(1,0,1)来定义一个正方形。让正方形<br>绕着 y 轴的顺时针方向旋转−30º（即，逆时针方向旋转 30º）。则y轴旋转矩阵为：<br><img src="/img/directx数学基础_25.png" alt=""><br>再对正方形进行旋转（变换），将正方形的两个点与该矩阵相乘：<br><img src="/img/directx数学基础_26.png" alt=""><br>结果<br><img src="/img/directx数学基础_27.png" alt=""></p>
+<p>平移：<br><img src="/img/directx数学基础_28.png" alt=""><br>平移矩阵的逆矩阵如下：<br><img src="/img/directx数学基础_29.png" alt=""><br>例子：<br>假设我们通过一个最小点(−8,2,0)和一个最大点(−2,8,0)来定义一个正方形。让正方形<br>沿x轴平移12，沿y轴平移−10，z轴保持不变。则对应的平移矩阵如下：<br><img src="/img/directx数学基础_30.png" alt=""><br>再对正方形进行平移（变换），将正方形的两个点与该矩阵相乘：<br><img src="/img/directx数学基础_31.png" alt=""><br>结果<br><img src="/img/directx数学基础_32.png" alt=""></p>
 
       
     </div>
@@ -370,13 +378,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2017/01/28/directx数学基础/">directx数学基础1</a></p>
+        <p><span>Title:</span><a href="/2017/01/28/directx数学基础2/">directx数学基础2</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">小贱</a></p>
-        <p><span>Created:</span>2017-01-28, 09:42:53</p>
-        <p><span>Updated:</span>2017-01-28, 12:05:05</p>
+        <p><span>Created:</span>2017-01-28, 12:11:13</p>
+        <p><span>Updated:</span>2017-01-29, 13:49:44</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2017/01/28/directx数学基础/" title="directx数学基础1">2324268086.github.io/2017/01/28/directx数学基础/</a>
-            <span class="copy-path" data-clipboard-text="From 2324268086.github.io/2017/01/28/directx数学基础/　　By 小贱" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2017/01/28/directx数学基础2/" title="directx数学基础2">2324268086.github.io/2017/01/28/directx数学基础2/</a>
+            <span class="copy-path" data-clipboard-text="From 2324268086.github.io/2017/01/28/directx数学基础2/　　By 小贱" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -388,16 +396,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/01/28/directx数学基础2/">
-                    directx数学基础2
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/01/28/directx前言/">
-                    directx前言
+                <a href="/2017/01/28/directx数学基础/">
+                    directx数学基础1
                 </a>
             </div>
         
@@ -409,7 +411,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#向量（同具有大小和方向的物理量）"><span class="toc-number">1.</span> <span class="toc-text">向量（同具有大小和方向的物理量）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#坐标系（directx为左手坐标系）"><span class="toc-number">1.1.</span> <span class="toc-text">坐标系（directx为左手坐标系）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#向量长度（length）"><span class="toc-number">1.2.</span> <span class="toc-text">向量长度（length）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单位向量（normalize：-不关心向量的长度，只希望用向量来表示一个单纯的方向）"><span class="toc-number">1.3.</span> <span class="toc-text">单位向量（normalize： 不关心向量的长度，只希望用向量来表示一个单纯的方向）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#点积（dot：-两个向量对应分量的乘积之和）"><span class="toc-number">1.4.</span> <span class="toc-text">点积（dot： 两个向量对应分量的乘积之和）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#叉积（cross：-两个3D向量计算叉积，得到垂直于两个向量的第3个向量-）"><span class="toc-number">1.5.</span> <span class="toc-text">叉积（cross： 两个3D向量计算叉积，得到垂直于两个向量的第3个向量 ）</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#矩阵（矩形实数数组）"><span class="toc-number">1.</span> <span class="toc-text">矩阵（矩形实数数组）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#矩阵乘法（a中的行向量的维数必须与b中的列向量的维数相同）"><span class="toc-number">1.1.</span> <span class="toc-text">矩阵乘法（a中的行向量的维数必须与b中的列向量的维数相同）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#转置矩阵（transpose：-对一个矩阵的行和列进行互换）"><span class="toc-number">1.2.</span> <span class="toc-text">转置矩阵（transpose： 对一个矩阵的行和列进行互换）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单位矩阵（identity：-除了对角线上的元素为1外，其他元素均为0）"><span class="toc-number">1.3.</span> <span class="toc-text">单位矩阵（identity： 除了对角线上的元素为1外，其他元素均为0）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#逆矩阵（inverse：-乘法的逆运算（矩阵除法运算））"><span class="toc-number">1.4.</span> <span class="toc-text">逆矩阵（inverse： 乘法的逆运算（矩阵除法运算））</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本变换（4x4矩阵与向量-矩阵乘积来描述变换）"><span class="toc-number">1.5.</span> <span class="toc-text">基本变换（4x4矩阵与向量-矩阵乘积来描述变换）</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -449,7 +451,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/28/directx数学基础/" data-title="directx数学基础1" data-url="2324268086.github.io/2017/01/28/directx数学基础/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/28/directx数学基础2/" data-title="directx数学基础2" data-url="2324268086.github.io/2017/01/28/directx数学基础2/"></div>
     <script>
         var duoshuoQuery = {short_name:"2324268086"};
         var loadComment = function(){
@@ -472,15 +474,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/01/28/directx数学基础2/" title="Pre: directx数学基础2">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/01/28/directx前言/" title="Next: directx前言">
+            <a href="/2017/01/28/directx数学基础/" title="Next: directx数学基础1">
                 <i class="fa fa-angle-right"></i>
             </a>
         

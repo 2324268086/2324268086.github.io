@@ -21,7 +21,7 @@
 <meta property="og:url" content="2324268086.github.io/2017/01/30/directx初第三卷/index.html">
 <meta property="og:site_name" content="小贱's Blog">
 <meta property="og:description" content="固定功能渲染流水线顶点处理：非T&amp;amp;L顶点（未经过坐标变换和光照处理的顶点）-&amp;gt;[第一阶段]坐标变换和光照处理（世界变换-&amp;gt;取景变换-&amp;gt;光照处理-&amp;gt;投影变换-&amp;gt;视口变换）光栅化计算：T&amp;amp;L顶点（经过坐标变换和光照处理的顶点）-&amp;gt;[第二阶段]光栅化处理（纹理映射-&amp;gt;图元处理-&amp;gt;内部函数改变渲染状态）像素处理：片段处理器-&amp;gt;显存帧缓冲">
-<meta property="og:updated_time" content="2017-01-30T09:08:13.634Z">
+<meta property="og:updated_time" content="2017-01-30T09:11:42.899Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="directx初第三卷">
 <meta name="twitter:description" content="固定功能渲染流水线顶点处理：非T&amp;amp;L顶点（未经过坐标变换和光照处理的顶点）-&amp;gt;[第一阶段]坐标变换和光照处理（世界变换-&amp;gt;取景变换-&amp;gt;光照处理-&amp;gt;投影变换-&amp;gt;视口变换）光栅化计算：T&amp;amp;L顶点（经过坐标变换和光照处理的顶点）-&amp;gt;[第二阶段]光栅化处理（纹理映射-&amp;gt;图元处理-&amp;gt;内部函数改变渲染状态）像素处理：片段处理器-&amp;gt;显存帧缓冲">
@@ -159,13 +159,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>Friends</li>
+                        <li>友情链接</li>
                         
                         
-                        <li>About Me</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -277,7 +277,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap"><article id="post-directx初第三卷" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -324,9 +324,9 @@
 	
       
           
-        <h3 id="固定功能渲染流水线"><a href="#固定功能渲染流水线" class="headerlink" title="固定功能渲染流水线"></a>固定功能渲染流水线</h3><p><strong>顶点处理</strong>：非T&amp;L顶点（未经过坐标变换和光照处理的顶点）-&gt;[第一阶段]坐标变换和光照处理（世界变换-&gt;取景变换-&gt;光照处理-&gt;投影变换-&gt;视口变换）<br><strong>光栅化计算</strong>：T&amp;L顶点（经过坐标变换和光照处理的顶点）-&gt;[第二阶段]光栅化处理（纹理映射-&gt;图元处理-&gt;内部函数改变渲染状态）<br><strong>像素处理</strong>：片段处理器-&gt;显存帧缓冲-&gt;显示<br><a id="more"></a></p>
-<h3 id="可编程渲染流水线"><a href="#可编程渲染流水线" class="headerlink" title="可编程渲染流水线"></a>可编程渲染流水线</h3><p><strong>镶嵌处理</strong>：顶点-&gt;镶嵌器<br><strong>顶点处理</strong>：变换与光照+顶点着色器-&gt;剔除（背面剔除）-&gt;剪裁（用户剪裁平面-&gt;截头体剪裁）-&gt;齐次除法-&gt;视口映射<br><strong>光栅化计算</strong>：三角形设置<br><strong>像素处理</strong>：多重纹理贴图+像素着色器-&gt;测试（剪裁测试-&gt;Alpha测试-&gt;深度测试+模版测试）-&gt;Alpha混合-&gt;浓淡处理-&gt;通道掩码-&gt;显存帧缓冲-&gt;显示</p>
-<p>其中，顶点着色器模块，像素着色器模块为可编程模块<br>他们的着色器单元（四元组结构）分别为：<br><strong>Vertex Shader</strong>：float4(X,Y,Z,W)<br><strong>Pixel Shader</strong>：float4(R,G,B,A)</p>
+        <h3 id="固定功能渲染流水线"><a href="#固定功能渲染流水线" class="headerlink" title="固定功能渲染流水线"></a>固定功能渲染流水线</h3><p><code>顶点处理</code>：非T&amp;L顶点（未经过坐标变换和光照处理的顶点）-&gt;[<strong>第一阶段</strong>]坐标变换和光照处理（世界变换-&gt;取景变换-&gt;光照处理-&gt;投影变换-&gt;视口变换）<br><code>光栅化计算</code>：T&amp;L顶点（经过坐标变换和光照处理的顶点）-&gt;[<strong>第二阶段</strong>]光栅化处理（纹理映射-&gt;图元处理-&gt;内部函数改变渲染状态）<br><code>像素处理</code>：片段处理器-&gt;显存帧缓冲-&gt;显示<br><a id="more"></a></p>
+<h3 id="可编程渲染流水线"><a href="#可编程渲染流水线" class="headerlink" title="可编程渲染流水线"></a>可编程渲染流水线</h3><p><code>镶嵌处理</code>：顶点-&gt;镶嵌器<br><code>顶点处理</code>：变换与光照+顶点着色器-&gt;剔除（背面剔除）-&gt;剪裁（用户剪裁平面-&gt;截头体剪裁）-&gt;齐次除法-&gt;视口映射<br><code>光栅化计算</code>：三角形设置<br><code>像素处理</code>：多重纹理贴图+像素着色器-&gt;测试（剪裁测试-&gt;Alpha测试-&gt;深度测试+模版测试）-&gt;Alpha混合-&gt;浓淡处理-&gt;通道掩码-&gt;显存帧缓冲-&gt;显示</p>
+<p>其中，顶点着色器模块，像素着色器模块为可编程模块<br>他们的着色器单元（四元组结构）分别为：<br><code>Vertex Shader</code>：float4(X,Y,Z,W)<br><code>Pixel Shader</code>：float4(R,G,B,A)</p>
 
       
     </div>
@@ -335,17 +335,17 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2017/01/30/directx初第三卷/">directx初第三卷</a></p>
-        <p><span>Author:</span><a href="/" title="Back to Homepage">小贱</a></p>
-        <p><span>Created:</span>2017-01-30, 13:39:24</p>
-        <p><span>Updated:</span>2017-01-30, 17:08:13</p>
+        <p><span>本文标题:</span><a href="/2017/01/30/directx初第三卷/">directx初第三卷</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">小贱</a></p>
+        <p><span>发布时间:</span>2017-01-30, 13:39:24</p>
+        <p><span>最后更新:</span>2017-01-30, 17:11:42</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2017/01/30/directx初第三卷/" title="directx初第三卷">2324268086.github.io/2017/01/30/directx初第三卷/</a>
-            <span class="copy-path" data-clipboard-text="From 2324268086.github.io/2017/01/30/directx初第三卷/　　By 小贱" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/01/30/directx初第三卷/" title="directx初第三卷">2324268086.github.io/2017/01/30/directx初第三卷/</a>
+            <span class="copy-path" data-clipboard-text="原文: 2324268086.github.io/2017/01/30/directx初第三卷/　　作者: 小贱" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
         </p>
     </div>
 
@@ -372,7 +372,7 @@
 </article>
 
     <div id="toc" class="toc-article">
-        <strong class="toc-title">Contents</strong>
+        <strong class="toc-title">文章目录</strong>
         
             <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#固定功能渲染流水线"><span class="toc-number">1.</span> <span class="toc-text">固定功能渲染流水线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可编程渲染流水线"><span class="toc-number">2.</span> <span class="toc-text">可编程渲染流水线</span></a></li></ol>
         
@@ -388,10 +388,10 @@
         }
     </style>
 
-    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
     <script>
-        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
     </script>
 
 
@@ -437,15 +437,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/01/30/directx初第四卷/" title="Pre: directx初第四卷">
+            <a href="/2017/01/30/directx初第四卷/" title="上一篇: directx初第四卷">
                 <i class="fa fa-angle-left"></i>
             </a>
         
 
-        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/01/29/directx初第二卷/" title="Next: directx初第二卷">
+            <a href="/2017/01/29/directx初第二卷/" title="下一篇: directx初第二卷">
                 <i class="fa fa-angle-right"></i>
             </a>
         
@@ -476,7 +476,7 @@
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -485,7 +485,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -518,9 +518,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window

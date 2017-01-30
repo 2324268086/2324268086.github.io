@@ -287,6 +287,82 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-directx初第三卷" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/01/30/directx初第三卷/" class="article-date">
+      <time datetime="2017-01-30T05:39:24.000Z" itemprop="datePublished">2017-01-30</time>
+</a>
+
+ 
+    <a href="/2017/01/30/directx初第三卷/#comments" title="Comments">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+            <span class="ds-thread-count"  data-thread-key="2017/01/30/directx初第三卷/" ></span>
+        
+        
+    </a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/30/directx初第三卷/">directx初第三卷</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+	
+      
+          
+        <h3 id="固定功能渲染流水线"><a href="#固定功能渲染流水线" class="headerlink" title="固定功能渲染流水线"></a>固定功能渲染流水线</h3><p>顶点处理：非T&amp;L顶点（未经过坐标变换和光照处理的顶点）-&gt;[第一阶段]坐标变换和光照处理（世界变换-&gt;取景变换-&gt;光照处理-&gt;投影变换-&gt;视口变换）<br>光栅化计算：T&amp;L顶点（经过坐标变换和光照处理的顶点）-&gt;[第二阶段]光栅化处理（纹理映射-&gt;图元处理-&gt;内部函数改变渲染状态）<br>像素处理：片段处理器-&gt;显存帧缓冲-&gt;显示</p>
+<h3 id="可编程渲染流水线"><a href="#可编程渲染流水线" class="headerlink" title="可编程渲染流水线"></a>可编程渲染流水线</h3><p>镶嵌处理：顶点-&gt;镶嵌器<br>顶点处理：变换与光照+顶点着色器-&gt;剔除（背面剔除）-&gt;剪裁（用户剪裁平面-&gt;截头体剪裁）-&gt;齐次除法-&gt;视口映射<br>光栅化计算：三角形设置<br>像素处理：多重纹理贴图+像素着色器-&gt;测试（剪裁测试-&gt;Alpha测试-&gt;深度测试+模版测试）-&gt;Alpha混合-&gt;浓淡处理-&gt;通道掩码-&gt;显存帧缓冲-&gt;显示</p>
+<p>其中，顶点着色器模块，像素着色器模块为可编程模块<br>他们的着色器单元（四元组结构）分别为：<br>Vertex Shader：float4(X,Y,Z,W)<br>Pixel Shader：float4(R,G,B,A)</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/directx总结/">directx总结</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/directx/">directx</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-directx初第二卷" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

@@ -327,7 +327,10 @@
 	
       
           
-              <h2 id="坐标变换"><a href="#坐标变换" class="headerlink" title="坐标变换"></a>坐标变换</h2><h3 id="世界变换（局部坐标系转换到世界坐标系）"><a href="#世界变换（局部坐标系转换到世界坐标系）" class="headerlink" title="世界变换（局部坐标系转换到世界坐标系）"></a>世界变换（局部坐标系转换到世界坐标系）</h3><p><code>缩放</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">D3DXMATRIX scale;</span><br><span class="line"><span class="comment">//缩放矩阵（把生成的缩放矩阵存到矩阵变量中，x，y，z）</span></span><br><span class="line">D3DXMatrixScaling(&amp;scale, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line"><span class="comment">//设置变换（世界矩阵变换类型，和参数1矩阵右乘的矩阵）</span></span><br><span class="line">g_pd3dDevice-&gt;SetTransform(D3DTS_WORLD,&amp;scale);</span><br></pre></td></tr></table></figure></p>
+              <h2 id="坐标变换"><a href="#坐标变换" class="headerlink" title="坐标变换"></a>坐标变换</h2><h3 id="世界变换（局部坐标系转换到世界坐标系）"><a href="#世界变换（局部坐标系转换到世界坐标系）" class="headerlink" title="世界变换（局部坐标系转换到世界坐标系）"></a>世界变换（局部坐标系转换到世界坐标系）</h3><ol>
+<li><code>缩放</code><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">D3DXMATRIX scale;</span><br><span class="line"><span class="comment">//缩放矩阵（把生成的缩放矩阵存到矩阵变量中，x，y，z）</span></span><br><span class="line">D3DXMatrixScaling(&amp;scale, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line"><span class="comment">//设置变换（世界矩阵变换类型，和参数1矩阵右乘的矩阵）</span></span><br><span class="line">g_pd3dDevice-&gt;SetTransform(D3DTS_WORLD,&amp;scale);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
           
       
     </div>

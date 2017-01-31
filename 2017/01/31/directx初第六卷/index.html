@@ -16,16 +16,16 @@
 <meta name="360-site-verification" content="43cf0a0142f73cd99905003b02004055" />
 
 
-<meta name="description" content="配置环境下载Directx SDK(directx sdk june10就可以了)，在VS(vs2013差不多了)中新建win32空项目，然后在视图-&amp;gt;属性管理器找到 Debug|Win32-&amp;gt;Microsoft.Cpp.Win32.user，双击，选择vc++目录，设置包含目录和库目录为刚刚下的directx sdk目录中include，lib\x86 的路径">
+<meta name="description" content="Home">
 <meta property="og:type" content="article">
-<meta property="og:title" content="directx初第一卷">
-<meta property="og:url" content="https://2324268086.github.io/2017/01/29/directx初第一卷/index.html">
+<meta property="og:title" content="directx初第六卷">
+<meta property="og:url" content="https://2324268086.github.io/2017/01/31/directx初第六卷/index.html">
 <meta property="og:site_name" content="小贱's Blog">
-<meta property="og:description" content="配置环境下载Directx SDK(directx sdk june10就可以了)，在VS(vs2013差不多了)中新建win32空项目，然后在视图-&amp;gt;属性管理器找到 Debug|Win32-&amp;gt;Microsoft.Cpp.Win32.user，双击，选择vc++目录，设置包含目录和库目录为刚刚下的directx sdk目录中include，lib\x86 的路径">
-<meta property="og:updated_time" content="2017-01-30T09:35:32.940Z">
+<meta property="og:description" content="Home">
+<meta property="og:updated_time" content="2017-01-31T02:59:09.814Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="directx初第一卷">
-<meta name="twitter:description" content="配置环境下载Directx SDK(directx sdk june10就可以了)，在VS(vs2013差不多了)中新建win32空项目，然后在视图-&amp;gt;属性管理器找到 Debug|Win32-&amp;gt;Microsoft.Cpp.Win32.user，双击，选择vc++目录，设置包含目录和库目录为刚刚下的directx sdk目录中include，lib\x86 的路径">
+<meta name="twitter:title" content="directx初第六卷">
+<meta name="twitter:description" content="Home">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>directx初第一卷 | 小贱&#39;s Blog</title>
+<title>directx初第六卷 | 小贱&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -280,11 +280,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-directx初第一卷" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-directx初第六卷" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/01/29/directx初第一卷/" class="article-date">
-      <time datetime="2017-01-29T10:12:55.000Z" itemprop="datePublished">2017-01-29</time>
+      <a href="/2017/01/31/directx初第六卷/" class="article-date">
+      <time datetime="2017-01-31T02:59:09.000Z" itemprop="datePublished">2017-01-31</time>
 </a>
 
 
@@ -299,7 +299,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      directx初第一卷
+      directx初第六卷
     </h1>
   
 
@@ -307,16 +307,8 @@
       
       <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/directx总结/">directx总结</a>
-    </div>
-
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/directx/">directx</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -325,12 +317,7 @@
 	
       
           
-        <h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><p>下载Directx SDK(directx sdk june10就可以了)，在VS(vs2013差不多了)中新建win32空项目，<br>然后在视图-&gt;属性管理器找到 Debug|Win32-&gt;Microsoft.Cpp.Win32.user，<br>双击，选择vc++目录，设置包含目录和库目录为刚刚下的directx sdk目录中include，lib\x86 的路径<br><a id="more"></a><br>选择链接器，设置附加依赖项，粘贴以下代码<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">dxerr.lib</span><br><span class="line">dxguid.lib</span><br><span class="line">d3dx9d.lib</span><br><span class="line">d3dx10d.lib</span><br><span class="line">d3d9.lib</span><br><span class="line">winmm.lib</span><br><span class="line">comctl32.lib</span><br></pre></td></tr></table></figure></p>
-<p>下载番茄插件(VA)，同样加入dx sdk的include路径</p>
-<p>配置完成了! 不在累赘</p>
-<h3 id="Directx渲染体系"><a href="#Directx渲染体系" class="headerlink" title="Directx渲染体系"></a>Directx渲染体系</h3><p><code>老版</code>：固定功能流水线 使用directx内部封装的函数改变渲染状态<br><code>新版</code>：可编程渲染流水线 shader，使用hlsl(支持cg函数)或者shader汇编代码(被hlsl代替)来灵活的渲染</p>
-<h3 id="Directx程序流程"><a href="#Directx程序流程" class="headerlink" title="Directx程序流程"></a>Directx程序流程</h3><p>创建win32窗口-&gt;<strong>初始化</strong>（创建directx接口-&gt;校验硬件顶点运算-&gt;填充D3DPRESENT_PARAMETER结构-&gt;创建directx设备接口）<br>中间-&gt;场景布置<br>win32消息循环-&gt;<strong>渲染</strong>（清空缓存-&gt;开始绘制-&gt;绘制-&gt;结束绘制-&gt;翻转显示）</p>
-
+        
       
     </div>
     
@@ -338,13 +325,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2017/01/29/directx初第一卷/">directx初第一卷</a></p>
+        <p><span>Title:</span><a href="/2017/01/31/directx初第六卷/">directx初第六卷</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">小贱</a></p>
-        <p><span>Created:</span>2017-01-29, 18:12:55</p>
-        <p><span>Updated:</span>2017-01-30, 17:35:32</p>
+        <p><span>Created:</span>2017-01-31, 10:59:09</p>
+        <p><span>Updated:</span>2017-01-31, 10:59:09</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2017/01/29/directx初第一卷/" title="directx初第一卷">https://2324268086.github.io/2017/01/29/directx初第一卷/</a>
-            <span class="copy-path" data-clipboard-text="From https://2324268086.github.io/2017/01/29/directx初第一卷/　　By 小贱" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2017/01/31/directx初第六卷/" title="directx初第六卷">https://2324268086.github.io/2017/01/31/directx初第六卷/</a>
+            <span class="copy-path" data-clipboard-text="From https://2324268086.github.io/2017/01/31/directx初第六卷/　　By 小贱" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -356,16 +343,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/01/29/directx初第二卷/">
-                    directx初第二卷
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/01/28/directx数学基础2/">
-                    directx数学基础2
+                <a href="/2017/01/30/directx初第五卷/">
+                    directx初第五卷
                 </a>
             </div>
         
@@ -377,7 +358,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置环境"><span class="toc-number">1.</span> <span class="toc-text">配置环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Directx渲染体系"><span class="toc-number">2.</span> <span class="toc-text">Directx渲染体系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Directx程序流程"><span class="toc-number">3.</span> <span class="toc-text">Directx程序流程</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -417,7 +398,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/29/directx初第一卷/" data-title="directx初第一卷" data-url="https://2324268086.github.io/2017/01/29/directx初第一卷/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/31/directx初第六卷/" data-title="directx初第六卷" data-url="https://2324268086.github.io/2017/01/31/directx初第六卷/"></div>
     <script>
         var duoshuoQuery = {short_name:"2324268086"};
         var loadComment = function(){
@@ -440,15 +421,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/01/29/directx初第二卷/" title="Pre: directx初第二卷">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/01/28/directx数学基础2/" title="Next: directx数学基础2">
+            <a href="/2017/01/30/directx初第五卷/" title="Next: directx初第五卷">
                 <i class="fa fa-angle-right"></i>
             </a>
         

@@ -166,13 +166,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>Friends</li>
+                        <li>友情链接</li>
                         
                         
-                        <li>About Me</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -284,9 +284,84 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-directx初第七卷" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/01/31/directx初第七卷/" class="article-date">
+      <time datetime="2017-01-31T11:52:33.000Z" itemprop="datePublished">2017-01-31</time>
+</a>
+
+ 
+    <a href="/2017/01/31/directx初第七卷/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+            <span class="ds-thread-count"  data-thread-key="2017/01/31/directx初第七卷/" ></span>
+        
+        
+    </a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/31/directx初第七卷/">directx初第七卷</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+	
+      
+          
+        <p>##　光照处理</p>
+<h3 id="光照类型"><a href="#光照类型" class="headerlink" title="光照类型"></a>光照类型</h3><p><code>环境光（ambient）</code><br>环境光就是场景中物体表面产生的反射光的统一光照，环境光没有位置和方向，并且值为常量。<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//设置渲染状态（环境光，颜色）</span></span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_AMBIENT, D3DCOLOR_XRGB(<span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>));</span><br></pre></td></tr></table></figure></p>
+<p><code>漫反射光（diffuse）</code></p>
+<p>由光照方向以及顶点法向量计算得到</p>
+<p><code>镜面反射光（specular）</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//设置渲染状态（镜面反射，开启）</span></span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_SPECULARENABLE, TRUE);</span><br></pre></td></tr></table></figure></p>
+<p><code>自发光（emissive）</code></p>
+<p>通过对物体材质Emissive属性设置来实现的，自发光不会影响到其他物体</p>
+<h3 id="光源类型"><a href="#光源类型" class="headerlink" title="光源类型"></a>光源类型</h3><p><code>点光源（point）</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">D3DLIGHT9 <span class="title">InitPointLight</span><span class="params">(D3DXVECTOR3* position, D3DXCOLOR* color)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	D3DLIGHT9 light;</span><br><span class="line">	::ZeroMemory(&amp;light, <span class="keyword">sizeof</span>(light));</span><br><span class="line">	light.Type = D3DLIGHT_POINT; <span class="comment">//类型为点光源</span></span><br><span class="line">	light.Ambient = *color*<span class="number">.6</span>f; <span class="comment">//环境光颜色值</span></span><br><span class="line">	light.Diffuse = *color; <span class="comment">//漫反射颜色值</span></span><br><span class="line">	light.Specular = *color*<span class="number">.6</span>f; <span class="comment">//镜面反射颜色值</span></span><br><span class="line">	light.Position = *position; <span class="comment">//光源位置</span></span><br><span class="line">	light.Range = <span class="number">1000</span>; <span class="comment">//光照范围</span></span><br><span class="line">	light.Attenuation0 = <span class="number">1</span>; <span class="comment">//这三个参数，表示光强随距离衰减的方式</span></span><br><span class="line">	light.Attenuation1 = <span class="number">0</span>;</span><br><span class="line">	light.Attenuation2 = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> light;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">D3DXVECTOR3 <span class="title">pos</span><span class="params">(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">D3DXCOLOR color = D3DCOLOR_XRGB(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>);</span><br><span class="line">D3DLIGHT9 point;</span><br><span class="line">point = InitPointLight(&amp;pos, &amp;color);</span><br><span class="line"><span class="comment">//设置光源（选择第一个光源，填充好的灯光类型地址）</span></span><br><span class="line">g_pd3dDevice-&gt;SetLight(<span class="number">0</span>, &amp;point);</span><br><span class="line"><span class="comment">//启用光照（选择第一个光源，开灯）</span></span><br><span class="line">g_pd3dDevice-&gt;LightEnable(<span class="number">0</span>, <span class="literal">true</span>);</span><br><span class="line"><span class="comment">//设置渲染状态（对法线向量进行归一化处理，开启）</span></span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_NORMALIZENORMALS, <span class="literal">true</span>);</span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_SPECULARENABLE, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure></p>
+<p><code>方向光（directional）</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">D3DLIGHT9 <span class="title">InitDirectionalLight</span><span class="params">(D3DXVECTOR3* direction, D3DXCOLOR* color)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	D3DLIGHT9 light;</span><br><span class="line">	::ZeroMemory(&amp;light, <span class="keyword">sizeof</span>(light));</span><br><span class="line">	light.Type = D3DLIGHT_DIRECTIONAL;</span><br><span class="line">	light.Ambient = *color*<span class="number">.6</span>f;</span><br><span class="line">	light.Diffuse = *color;</span><br><span class="line">	light.Specular = *color*<span class="number">.6</span>f;</span><br><span class="line">	light.Direction = *direction; <span class="comment">//光源光照方向</span></span><br><span class="line">	<span class="keyword">return</span> light;</span><br><span class="line">&#125;</span><br><span class="line">D3DLIGHT9 directional;</span><br><span class="line"><span class="function">D3DXVECTOR3 <span class="title">dir</span><span class="params">(<span class="number">1</span>, <span class="number">0</span>, <span class="number">.25</span>f)</span></span>;</span><br><span class="line">D3DXCOLOR color = D3DCOLOR_XRGB(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>);</span><br><span class="line">directional = InitDirectionalLight(&amp;dir, &amp;color);</span><br><span class="line">g_pd3dDevice-&gt;SetLight(<span class="number">0</span>, &amp;directional);</span><br><span class="line">g_pd3dDevice-&gt;LightEnable(<span class="number">0</span>, <span class="literal">true</span>);</span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_NORMALIZENORMALS, <span class="literal">true</span>);</span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_SPECULARENABLE, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure></p>
+<p><code>聚光灯（spot）</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">D3DLIGHT9 <span class="title">InitSpotLight</span><span class="params">(D3DXVECTOR3* position, D3DXVECTOR3* direction, D3DXCOLOR* color)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	D3DLIGHT9 light;</span><br><span class="line">	::ZeroMemory(&amp;light, <span class="keyword">sizeof</span>(light));</span><br><span class="line">	light.Type = D3DLIGHT_SPOT;</span><br><span class="line">	light.Ambient = *color*<span class="number">.0</span>f;</span><br><span class="line">	light.Diffuse = *color;</span><br><span class="line">	light.Specular = *color*<span class="number">.6</span>f;</span><br><span class="line">	light.Position = *position;</span><br><span class="line">	light.Direction = *direction;</span><br><span class="line">	light.Range = <span class="number">1000</span>;</span><br><span class="line">	light.Falloff = <span class="number">1</span>; <span class="comment">//用于聚光灯从内锥形到外锥形的衰减方式 </span></span><br><span class="line">	light.Attenuation0 = <span class="number">1</span>;</span><br><span class="line">	light.Attenuation1 = <span class="number">0</span>;</span><br><span class="line">	light.Attenuation2 = <span class="number">0</span>;</span><br><span class="line">	light.Theta = <span class="number">.4</span>f; <span class="comment">//仅用于聚光灯，内锥形的角度，单位为弧度</span></span><br><span class="line">	light.Phi = <span class="number">.9</span>f; <span class="comment">//仅用于聚光灯，外锥形的角度，单位为弧度</span></span><br><span class="line">	<span class="keyword">return</span> light;</span><br><span class="line">&#125;</span><br><span class="line">D3DLIGHT9 spot;</span><br><span class="line"><span class="function">D3DXVECTOR3 <span class="title">pos</span><span class="params">(<span class="number">0</span>, <span class="number">0</span>, <span class="number">-5</span>)</span></span>;</span><br><span class="line"><span class="function">D3DXVECTOR3 <span class="title">dir</span><span class="params">(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>)</span></span>;</span><br><span class="line">D3DXCOLOR color = White;</span><br><span class="line">spot = InitSpotLight(&amp;pos, &amp;dir, &amp;color);</span><br><span class="line">g_pd3dDevice-&gt;SetLight(<span class="number">0</span>, &amp;spot);</span><br><span class="line">g_pd3dDevice-&gt;LightEnable(<span class="number">0</span>, <span class="literal">true</span>);</span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_NORMALIZENORMALS, <span class="literal">true</span>);</span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_SPECULARENABLE, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure></p>
+<h3 id="没有效果？（需要模型和材质才能看得出效果）"><a href="#没有效果？（需要模型和材质才能看得出效果）" class="headerlink" title="没有效果？（需要模型和材质才能看得出效果）"></a>没有效果？（需要模型和材质才能看得出效果）</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">ID3DXMesh* teapot;</span><br><span class="line">D3DXCreateTeapot(g_pd3dDevice, &amp;teapot, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">D3DMATERIAL9 mtrl;</span><br><span class="line">mtrl.Ambient = (D3DXCOLOR)D3DCOLOR_XRGB(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">mtrl.Diffuse = (D3DXCOLOR)D3DCOLOR_XRGB(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">mtrl.Specular = (D3DXCOLOR)D3DCOLOR_XRGB(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">mtrl.Power = <span class="number">2</span>;</span><br><span class="line">mtrl.Emissive = (D3DXCOLOR)D3DCOLOR_XRGB(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">g_pd3dDevice-&gt;SetMaterial(&amp;mtrl);</span><br><span class="line">teapot-&gt;DrawSubset(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-directx初第六卷" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -296,7 +371,7 @@
 </a>
 
  
-    <a href="/2017/01/31/directx初第六卷/#comments" title="Comments">
+    <a href="/2017/01/31/directx初第六卷/#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
@@ -374,7 +449,7 @@
 </a>
 
  
-    <a href="/2017/01/30/directx初第五卷/#comments" title="Comments">
+    <a href="/2017/01/30/directx初第五卷/#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
@@ -452,7 +527,7 @@
 </a>
 
  
-    <a href="/2017/01/30/directx初第四卷/#comments" title="Comments">
+    <a href="/2017/01/30/directx初第四卷/#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
@@ -530,7 +605,7 @@
 </a>
 
  
-    <a href="/2017/01/30/directx初第三卷/#comments" title="Comments">
+    <a href="/2017/01/30/directx初第三卷/#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
@@ -608,7 +683,7 @@
 </a>
 
  
-    <a href="/2017/01/29/directx初第二卷/#comments" title="Comments">
+    <a href="/2017/01/29/directx初第二卷/#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
@@ -686,7 +761,7 @@
 </a>
 
  
-    <a href="/2017/01/29/directx初第一卷/#comments" title="Comments">
+    <a href="/2017/01/29/directx初第一卷/#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
@@ -764,7 +839,7 @@
 </a>
 
  
-    <a href="/2017/01/28/directx数学基础2/#comments" title="Comments">
+    <a href="/2017/01/28/directx数学基础2/#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
@@ -843,7 +918,7 @@
 </a>
 
  
-    <a href="/2017/01/28/directx数学基础/#comments" title="Comments">
+    <a href="/2017/01/28/directx数学基础/#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
@@ -922,7 +997,7 @@
 </a>
 
  
-    <a href="/2017/01/28/directx前言/#comments" title="Comments">
+    <a href="/2017/01/28/directx前言/#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
@@ -992,72 +1067,10 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2017/01/26/hello-world/" class="article-date">
-      <time datetime="2017-01-26T01:30:01.075Z" itemprop="datePublished">2017-01-26</time>
-</a>
-
- 
-    <a href="/2017/01/26/hello-world/#comments" title="Comments">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-            <span class="ds-thread-count"  data-thread-key="2017/01/26/hello-world/" ></span>
-        
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/26/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-	
-      
-          
-        <p>Welcome to the xiaojian of the home page</p>
-<h2 id="欢迎来到小贱的主页"><a href="#欢迎来到小贱的主页" class="headerlink" title="欢迎来到小贱的主页"></a>欢迎来到小贱的主页</h2>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
@@ -1076,7 +1089,7 @@
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -1085,7 +1098,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -1143,9 +1156,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window

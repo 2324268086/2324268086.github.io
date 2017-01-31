@@ -16,22 +16,28 @@
 <meta name="360-site-verification" content="43cf0a0142f73cd99905003b02004055" />
 
 
-<meta name="description" content="坐标变换世界变换（局部坐标系转换到世界坐标系）缩放D3DXMATRIX scale;//缩放矩阵（把生成的缩放矩阵存到矩阵变量中，x，y，z）D3DXMatrixScaling(&amp;amp;scale, 2, 1, 1);//设置变换（世界矩阵变换类型，和参数1矩阵右乘的矩阵）g_pd3dDevice-&amp;gt;SetTransform(D3DTS_WORLD,&amp;amp;scale);">
+<meta name="description" content="##　光照处理
+光照类型环境光（ambient）环境光就是场景中物体表面产生的反射光的统一光照，环境光没有位置和方向，并且值为常量。//设置渲染状态（环境光，颜色）g_pd3dDevice-&amp;gt;SetRenderState(D3DRS_AMBIENT, D3DCOLOR_XRGB(100, 100, 100));
+漫反射光（diffuse）
+由光照方向以及顶点法向量计算得到
+镜面反射光（spe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="directx初第六卷">
-<meta property="og:url" content="https://2324268086.github.io/2017/01/31/directx初第六卷/index.html">
+<meta property="og:title" content="directx初第七卷">
+<meta property="og:url" content="https://2324268086.github.io/2017/01/31/directx初第七卷/index.html">
 <meta property="og:site_name" content="小贱's Blog">
-<meta property="og:description" content="坐标变换世界变换（局部坐标系转换到世界坐标系）缩放D3DXMATRIX scale;//缩放矩阵（把生成的缩放矩阵存到矩阵变量中，x，y，z）D3DXMatrixScaling(&amp;amp;scale, 2, 1, 1);//设置变换（世界矩阵变换类型，和参数1矩阵右乘的矩阵）g_pd3dDevice-&amp;gt;SetTransform(D3DTS_WORLD,&amp;amp;scale);">
-<meta property="og:image" content="https://2324268086.github.io/img/directx初第六卷1.PNG">
-<meta property="og:image" content="https://2324268086.github.io/img/directx初第六卷2.PNG">
-<meta property="og:image" content="https://2324268086.github.io/img/directx初第六卷3.PNG">
-<meta property="og:image" content="https://2324268086.github.io/img/directx初第六卷4.PNG">
-<meta property="og:image" content="https://2324268086.github.io/img/directx初第六卷5.PNG">
-<meta property="og:updated_time" content="2017-01-31T10:08:08.855Z">
+<meta property="og:description" content="##　光照处理
+光照类型环境光（ambient）环境光就是场景中物体表面产生的反射光的统一光照，环境光没有位置和方向，并且值为常量。//设置渲染状态（环境光，颜色）g_pd3dDevice-&amp;gt;SetRenderState(D3DRS_AMBIENT, D3DCOLOR_XRGB(100, 100, 100));
+漫反射光（diffuse）
+由光照方向以及顶点法向量计算得到
+镜面反射光（spe">
+<meta property="og:updated_time" content="2017-01-31T14:50:35.668Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="directx初第六卷">
-<meta name="twitter:description" content="坐标变换世界变换（局部坐标系转换到世界坐标系）缩放D3DXMATRIX scale;//缩放矩阵（把生成的缩放矩阵存到矩阵变量中，x，y，z）D3DXMatrixScaling(&amp;amp;scale, 2, 1, 1);//设置变换（世界矩阵变换类型，和参数1矩阵右乘的矩阵）g_pd3dDevice-&amp;gt;SetTransform(D3DTS_WORLD,&amp;amp;scale);">
-<meta name="twitter:image" content="https://2324268086.github.io/img/directx初第六卷1.PNG">
+<meta name="twitter:title" content="directx初第七卷">
+<meta name="twitter:description" content="##　光照处理
+光照类型环境光（ambient）环境光就是场景中物体表面产生的反射光的统一光照，环境光没有位置和方向，并且值为常量。//设置渲染状态（环境光，颜色）g_pd3dDevice-&amp;gt;SetRenderState(D3DRS_AMBIENT, D3DCOLOR_XRGB(100, 100, 100));
+漫反射光（diffuse）
+由光照方向以及顶点法向量计算得到
+镜面反射光（spe">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -63,7 +69,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>directx初第六卷 | 小贱&#39;s Blog</title>
+<title>directx初第七卷 | 小贱&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -286,11 +292,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-directx初第六卷" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-directx初第七卷" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/01/31/directx初第六卷/" class="article-date">
-      <time datetime="2017-01-31T02:59:09.000Z" itemprop="datePublished">2017-01-31</time>
+      <a href="/2017/01/31/directx初第七卷/" class="article-date">
+      <time datetime="2017-01-31T11:52:33.000Z" itemprop="datePublished">2017-01-31</time>
 </a>
 
 
@@ -305,7 +311,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      directx初第六卷
+      directx初第七卷
     </h1>
   
 
@@ -313,16 +319,8 @@
       
       <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/directx总结/">directx总结</a>
-    </div>
-
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/directx/">directx</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -331,21 +329,17 @@
 	
       
           
-        <h2 id="坐标变换"><a href="#坐标变换" class="headerlink" title="坐标变换"></a>坐标变换</h2><h3 id="世界变换（局部坐标系转换到世界坐标系）"><a href="#世界变换（局部坐标系转换到世界坐标系）" class="headerlink" title="世界变换（局部坐标系转换到世界坐标系）"></a>世界变换（局部坐标系转换到世界坐标系）</h3><p><code>缩放</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">D3DXMATRIX scale;</span><br><span class="line"><span class="comment">//缩放矩阵（把生成的缩放矩阵存到矩阵变量中，x，y，z）</span></span><br><span class="line">D3DXMatrixScaling(&amp;scale, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line"><span class="comment">//设置变换（世界矩阵变换类型，和参数1矩阵右乘的矩阵）</span></span><br><span class="line">g_pd3dDevice-&gt;SetTransform(D3DTS_WORLD,&amp;scale);</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p><img src="/img/directx初第六卷1.PNG" alt=""></p>
-<p><code>旋转</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">D3DXMATRIX rotation;</span><br><span class="line"><span class="comment">//角度=45弧度*（π/180）</span></span><br><span class="line"><span class="keyword">float</span> angle = <span class="number">45</span> * (D3DX_PI / <span class="number">180</span>);</span><br><span class="line"><span class="comment">//Y轴旋转矩阵（把生成的旋转矩阵存到矩阵变量中，角度）</span></span><br><span class="line">D3DXMatrixRotationY(&amp;rotation, angle);</span><br><span class="line">g_pd3dDevice-&gt;SetTransform(D3DTS_WORLD, &amp;rotation);</span><br></pre></td></tr></table></figure></p>
-<p><img src="/img/directx初第六卷2.PNG" alt=""></p>
-<p><code>平移</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">D3DXMATRIX trans;</span><br><span class="line"><span class="comment">//平移矩阵（把生成的平移矩阵存到矩阵变量中，x，y，z）</span></span><br><span class="line">D3DXMatrixTranslation(&amp;trans,<span class="number">0</span>,<span class="number">2</span>,<span class="number">0</span>);</span><br><span class="line">g_pd3dDevice-&gt;SetTransform(D3DTS_WORLD, &amp;trans);</span><br></pre></td></tr></table></figure></p>
-<p><img src="/img/directx初第六卷3.PNG" alt=""></p>
-<p><code>抱团开雾</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">D3DXMATRIX world, scale, rotation, trans;</span><br><span class="line">	</span><br><span class="line">D3DXMatrixScaling(&amp;scale, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">float</span> angle = <span class="number">45</span> * (D3DX_PI / <span class="number">180</span>);</span><br><span class="line">D3DXMatrixRotationY(&amp;rotation, angle);</span><br><span class="line"><span class="comment">//矩阵相乘（把结果矩阵存到矩阵变量中，左乘矩阵，右乘矩阵），顺序为：1缩2旋3平</span></span><br><span class="line">D3DXMatrixMultiply(&amp;world, &amp;scale, &amp;rotation);</span><br><span class="line"></span><br><span class="line">D3DXMatrixTranslation(&amp;trans, <span class="number">0</span>, <span class="number">2</span>, <span class="number">0</span>);</span><br><span class="line">D3DXMatrixMultiply(&amp;world, &amp;world, &amp;trans);</span><br><span class="line"></span><br><span class="line">g_pd3dDevice-&gt;SetTransform(D3DTS_WORLD, &amp;world);</span><br></pre></td></tr></table></figure></p>
-<p><img src="/img/directx初第六卷4.PNG" alt=""></p>
-<h3 id="取景变换（设置摄像机位置）"><a href="#取景变换（设置摄像机位置）" class="headerlink" title="取景变换（设置摄像机位置）"></a>取景变换（设置摄像机位置）</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">D3DXVECTOR3 <span class="title">position</span><span class="params">(<span class="number">0</span>, <span class="number">0</span>, <span class="number">-5</span>)</span></span>;</span><br><span class="line"><span class="function">D3DXVECTOR3 <span class="title">target</span><span class="params">(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line"><span class="function">D3DXVECTOR3 <span class="title">up</span><span class="params">(<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">D3DXMATRIX v;</span><br><span class="line"><span class="comment">//生成取景变换矩阵（把生成的观察矩阵存到矩阵变量中，摄像机在世界坐标系位置，观察点在世界坐标系的位置，摄像机up向量）</span></span><br><span class="line">D3DXMatrixLookAtLH(&amp;v, &amp;position, &amp;target, &amp;up);</span><br><span class="line">g_pd3dDevice-&gt;SetTransform(D3DTS_VIEW, &amp;v);</span><br></pre></td></tr></table></figure>
-<h3 id="投影变换（三维物体投影到二维的屏幕上）"><a href="#投影变换（三维物体投影到二维的屏幕上）" class="headerlink" title="投影变换（三维物体投影到二维的屏幕上）"></a>投影变换（三维物体投影到二维的屏幕上）</h3><p><code>视截体</code>：虚拟摄像机与投影窗口组成的三维空间</p>
-<p><code>裁剪</code>：位于视截体内的物体会被投影到二维平面，而位于视截体外的物体将不会被显示<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">D3DXMATRIX proj;</span><br><span class="line"><span class="comment">//生成视截体（把生成的投影变换矩阵存到矩阵变量中，视域角度（摄像机在y轴的成像角度），宽，高，近裁剪面距（摄像机离最近裁剪平面距离），远裁剪面距）</span></span><br><span class="line">D3DXMatrixPerspectiveFovLH(&amp;proj, D3DX_PI*<span class="number">.5</span>f, (<span class="keyword">float</span>)<span class="number">640</span> / (<span class="keyword">float</span>)<span class="number">480</span>, <span class="number">1</span>, <span class="number">1000</span>);</span><br><span class="line">g_pd3dDevice-&gt;SetTransform(D3DTS_PROJECTION, &amp;proj);</span><br></pre></td></tr></table></figure></p>
-<h3 id="视口变换（设置显示区域）"><a href="#视口变换（设置显示区域）" class="headerlink" title="视口变换（设置显示区域）"></a>视口变换（设置显示区域）</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//视口结构体（x，y，宽度，高度，最小深度，最大深度）</span></span><br><span class="line">D3DVIEWPORT9 vp = &#123; <span class="number">30</span>, <span class="number">20</span>, <span class="number">560</span>, <span class="number">400</span>, <span class="number">0</span>, <span class="number">1</span> &#125;;</span><br><span class="line">g_pd3dDevice-&gt;SetViewport(&amp;vp);</span><br></pre></td></tr></table></figure>
-<p><img src="/img/directx初第六卷5.PNG" alt=""></p>
-
+        <p>##　光照处理</p>
+<h3 id="光照类型"><a href="#光照类型" class="headerlink" title="光照类型"></a>光照类型</h3><p><code>环境光（ambient）</code><br>环境光就是场景中物体表面产生的反射光的统一光照，环境光没有位置和方向，并且值为常量。<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//设置渲染状态（环境光，颜色）</span></span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_AMBIENT, D3DCOLOR_XRGB(<span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>));</span><br></pre></td></tr></table></figure></p>
+<p><code>漫反射光（diffuse）</code></p>
+<p>由光照方向以及顶点法向量计算得到</p>
+<p><code>镜面反射光（specular）</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//设置渲染状态（镜面反射，开启）</span></span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_SPECULARENABLE, TRUE);</span><br></pre></td></tr></table></figure></p>
+<p><code>自发光（emissive）</code></p>
+<p>通过对物体材质Emissive属性设置来实现的，自发光不会影响到其他物体</p>
+<h3 id="光源类型"><a href="#光源类型" class="headerlink" title="光源类型"></a>光源类型</h3><p><code>点光源（point）</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">D3DLIGHT9 <span class="title">InitPointLight</span><span class="params">(D3DXVECTOR3* position, D3DXCOLOR* color)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	D3DLIGHT9 light;</span><br><span class="line">	::ZeroMemory(&amp;light, <span class="keyword">sizeof</span>(light));</span><br><span class="line">	light.Type = D3DLIGHT_POINT; <span class="comment">//类型为点光源</span></span><br><span class="line">	light.Ambient = *color*<span class="number">.6</span>f; <span class="comment">//环境光颜色值</span></span><br><span class="line">	light.Diffuse = *color; <span class="comment">//漫反射颜色值</span></span><br><span class="line">	light.Specular = *color*<span class="number">.6</span>f; <span class="comment">//镜面反射颜色值</span></span><br><span class="line">	light.Position = *position; <span class="comment">//光源位置</span></span><br><span class="line">	light.Range = <span class="number">1000</span>; <span class="comment">//光照范围</span></span><br><span class="line">	light.Attenuation0 = <span class="number">1</span>; <span class="comment">//这三个参数，表示光强随距离衰减的方式</span></span><br><span class="line">	light.Attenuation1 = <span class="number">0</span>;</span><br><span class="line">	light.Attenuation2 = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> light;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">D3DXVECTOR3 <span class="title">pos</span><span class="params">(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">D3DXCOLOR color = D3DCOLOR_XRGB(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>);</span><br><span class="line">D3DLIGHT9 point;</span><br><span class="line">point = InitPointLight(&amp;pos, &amp;color);</span><br><span class="line"><span class="comment">//设置光源（选择第一个光源，填充好的灯光类型地址）</span></span><br><span class="line">g_pd3dDevice-&gt;SetLight(<span class="number">0</span>, &amp;point);</span><br><span class="line"><span class="comment">//启用光照（选择第一个光源，开灯）</span></span><br><span class="line">g_pd3dDevice-&gt;LightEnable(<span class="number">0</span>, <span class="literal">true</span>);</span><br><span class="line"><span class="comment">//设置渲染状态（对法线向量进行归一化处理，开启）</span></span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_NORMALIZENORMALS, <span class="literal">true</span>);</span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_SPECULARENABLE, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure></p>
+<p><code>方向光（directional）</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">D3DLIGHT9 <span class="title">InitDirectionalLight</span><span class="params">(D3DXVECTOR3* direction, D3DXCOLOR* color)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	D3DLIGHT9 light;</span><br><span class="line">	::ZeroMemory(&amp;light, <span class="keyword">sizeof</span>(light));</span><br><span class="line">	light.Type = D3DLIGHT_DIRECTIONAL;</span><br><span class="line">	light.Ambient = *color*<span class="number">.6</span>f;</span><br><span class="line">	light.Diffuse = *color;</span><br><span class="line">	light.Specular = *color*<span class="number">.6</span>f;</span><br><span class="line">	light.Direction = *direction; <span class="comment">//光源光照方向</span></span><br><span class="line">	<span class="keyword">return</span> light;</span><br><span class="line">&#125;</span><br><span class="line">D3DLIGHT9 directional;</span><br><span class="line"><span class="function">D3DXVECTOR3 <span class="title">dir</span><span class="params">(<span class="number">1</span>, <span class="number">0</span>, <span class="number">.25</span>f)</span></span>;</span><br><span class="line">D3DXCOLOR color = D3DCOLOR_XRGB(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>);</span><br><span class="line">directional = InitDirectionalLight(&amp;dir, &amp;color);</span><br><span class="line">g_pd3dDevice-&gt;SetLight(<span class="number">0</span>, &amp;directional);</span><br><span class="line">g_pd3dDevice-&gt;LightEnable(<span class="number">0</span>, <span class="literal">true</span>);</span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_NORMALIZENORMALS, <span class="literal">true</span>);</span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_SPECULARENABLE, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure></p>
+<p><code>聚光灯（spot）</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">D3DLIGHT9 <span class="title">InitSpotLight</span><span class="params">(D3DXVECTOR3* position, D3DXVECTOR3* direction, D3DXCOLOR* color)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	D3DLIGHT9 light;</span><br><span class="line">	::ZeroMemory(&amp;light, <span class="keyword">sizeof</span>(light));</span><br><span class="line">	light.Type = D3DLIGHT_SPOT;</span><br><span class="line">	light.Ambient = *color*<span class="number">.0</span>f;</span><br><span class="line">	light.Diffuse = *color;</span><br><span class="line">	light.Specular = *color*<span class="number">.6</span>f;</span><br><span class="line">	light.Position = *position;</span><br><span class="line">	light.Direction = *direction;</span><br><span class="line">	light.Range = <span class="number">1000</span>;</span><br><span class="line">	light.Falloff = <span class="number">1</span>; <span class="comment">//用于聚光灯从内锥形到外锥形的衰减方式 </span></span><br><span class="line">	light.Attenuation0 = <span class="number">1</span>;</span><br><span class="line">	light.Attenuation1 = <span class="number">0</span>;</span><br><span class="line">	light.Attenuation2 = <span class="number">0</span>;</span><br><span class="line">	light.Theta = <span class="number">.4</span>f; <span class="comment">//仅用于聚光灯，内锥形的角度，单位为弧度</span></span><br><span class="line">	light.Phi = <span class="number">.9</span>f; <span class="comment">//仅用于聚光灯，外锥形的角度，单位为弧度</span></span><br><span class="line">	<span class="keyword">return</span> light;</span><br><span class="line">&#125;</span><br><span class="line">D3DLIGHT9 spot;</span><br><span class="line"><span class="function">D3DXVECTOR3 <span class="title">pos</span><span class="params">(<span class="number">0</span>, <span class="number">0</span>, <span class="number">-5</span>)</span></span>;</span><br><span class="line"><span class="function">D3DXVECTOR3 <span class="title">dir</span><span class="params">(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>)</span></span>;</span><br><span class="line">D3DXCOLOR color = White;</span><br><span class="line">spot = InitSpotLight(&amp;pos, &amp;dir, &amp;color);</span><br><span class="line">g_pd3dDevice-&gt;SetLight(<span class="number">0</span>, &amp;spot);</span><br><span class="line">g_pd3dDevice-&gt;LightEnable(<span class="number">0</span>, <span class="literal">true</span>);</span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_NORMALIZENORMALS, <span class="literal">true</span>);</span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_SPECULARENABLE, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure></p>
+<h3 id="没有效果？（需要模型和材质才能看得出效果）"><a href="#没有效果？（需要模型和材质才能看得出效果）" class="headerlink" title="没有效果？（需要模型和材质才能看得出效果）"></a>没有效果？（需要模型和材质才能看得出效果）</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">ID3DXMesh* teapot;</span><br><span class="line">D3DXCreateTeapot(g_pd3dDevice, &amp;teapot, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">D3DMATERIAL9 mtrl;</span><br><span class="line">mtrl.Ambient = (D3DXCOLOR)D3DCOLOR_XRGB(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">mtrl.Diffuse = (D3DXCOLOR)D3DCOLOR_XRGB(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">mtrl.Specular = (D3DXCOLOR)D3DCOLOR_XRGB(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">mtrl.Power = <span class="number">2</span>;</span><br><span class="line">mtrl.Emissive = (D3DXCOLOR)D3DCOLOR_XRGB(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">g_pd3dDevice-&gt;SetMaterial(&amp;mtrl);</span><br><span class="line">teapot-&gt;DrawSubset(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -353,13 +347,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/01/31/directx初第六卷/">directx初第六卷</a></p>
+        <p><span>本文标题:</span><a href="/2017/01/31/directx初第七卷/">directx初第七卷</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">小贱</a></p>
-        <p><span>发布时间:</span>2017-01-31, 10:59:09</p>
-        <p><span>最后更新:</span>2017-01-31, 18:08:08</p>
+        <p><span>发布时间:</span>2017-01-31, 19:52:33</p>
+        <p><span>最后更新:</span>2017-01-31, 22:50:35</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/01/31/directx初第六卷/" title="directx初第六卷">https://2324268086.github.io/2017/01/31/directx初第六卷/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://2324268086.github.io/2017/01/31/directx初第六卷/　　作者: 小贱" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/01/31/directx初第七卷/" title="directx初第七卷">https://2324268086.github.io/2017/01/31/directx初第七卷/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://2324268086.github.io/2017/01/31/directx初第七卷/　　作者: 小贱" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -371,16 +365,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/01/31/directx初第七卷/">
-                    directx初第七卷
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/01/30/directx初第五卷/">
-                    directx初第五卷
+                <a href="/2017/01/31/directx初第六卷/">
+                    directx初第六卷
                 </a>
             </div>
         
@@ -392,7 +380,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#坐标变换"><span class="toc-number">1.</span> <span class="toc-text">坐标变换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#世界变换（局部坐标系转换到世界坐标系）"><span class="toc-number">1.1.</span> <span class="toc-text">世界变换（局部坐标系转换到世界坐标系）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#取景变换（设置摄像机位置）"><span class="toc-number">1.2.</span> <span class="toc-text">取景变换（设置摄像机位置）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#投影变换（三维物体投影到二维的屏幕上）"><span class="toc-number">1.3.</span> <span class="toc-text">投影变换（三维物体投影到二维的屏幕上）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#视口变换（设置显示区域）"><span class="toc-number">1.4.</span> <span class="toc-text">视口变换（设置显示区域）</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#光照类型"><span class="toc-number">1.</span> <span class="toc-text">光照类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#光源类型"><span class="toc-number">2.</span> <span class="toc-text">光源类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#没有效果？（需要模型和材质才能看得出效果）"><span class="toc-number">3.</span> <span class="toc-text">没有效果？（需要模型和材质才能看得出效果）</span></a></li></ol>
         
     </div>
     <style>
@@ -432,7 +420,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/31/directx初第六卷/" data-title="directx初第六卷" data-url="https://2324268086.github.io/2017/01/31/directx初第六卷/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/31/directx初第七卷/" data-title="directx初第七卷" data-url="https://2324268086.github.io/2017/01/31/directx初第七卷/"></div>
     <script>
         var duoshuoQuery = {short_name:"2324268086"};
         var loadComment = function(){
@@ -455,15 +443,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/01/31/directx初第七卷/" title="上一篇: directx初第七卷">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/01/30/directx初第五卷/" title="下一篇: directx初第五卷">
+            <a href="/2017/01/31/directx初第六卷/" title="下一篇: directx初第六卷">
                 <i class="fa fa-angle-right"></i>
             </a>
         

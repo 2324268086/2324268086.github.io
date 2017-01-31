@@ -16,16 +16,28 @@
 <meta name="360-site-verification" content="43cf0a0142f73cd99905003b02004055" />
 
 
-<meta name="description" content="Home">
+<meta name="description" content="坐标变换世界变换（局部坐标系转换到世界坐标系）缩放D3DXMATRIX scale;//缩放矩阵（把生成的缩放矩阵存到矩阵变量中，x，y，z）D3DXMatrixScaling(&amp;amp;scale, 2, 1, 1);//设置变换（世界矩阵变换类型，和参数1矩阵右乘的矩阵）g_pd3dDevice-&amp;gt;SetTransform(D3DTS_WORLD,&amp;amp;scale);
+
+旋转D3DX">
 <meta property="og:type" content="article">
 <meta property="og:title" content="directx初第六卷">
 <meta property="og:url" content="https://2324268086.github.io/2017/01/31/directx初第六卷/index.html">
 <meta property="og:site_name" content="小贱's Blog">
-<meta property="og:description" content="Home">
-<meta property="og:updated_time" content="2017-01-31T04:37:09.575Z">
+<meta property="og:description" content="坐标变换世界变换（局部坐标系转换到世界坐标系）缩放D3DXMATRIX scale;//缩放矩阵（把生成的缩放矩阵存到矩阵变量中，x，y，z）D3DXMatrixScaling(&amp;amp;scale, 2, 1, 1);//设置变换（世界矩阵变换类型，和参数1矩阵右乘的矩阵）g_pd3dDevice-&amp;gt;SetTransform(D3DTS_WORLD,&amp;amp;scale);
+
+旋转D3DX">
+<meta property="og:image" content="https://2324268086.github.io/img/directx初第六卷1.png">
+<meta property="og:image" content="https://2324268086.github.io/img/directx初第六卷2.png">
+<meta property="og:image" content="https://2324268086.github.io/img/directx初第六卷3.png">
+<meta property="og:image" content="https://2324268086.github.io/img/directx初第六卷4.png">
+<meta property="og:image" content="https://2324268086.github.io/img/directx初第六卷5.png">
+<meta property="og:updated_time" content="2017-01-31T09:42:47.437Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="directx初第六卷">
-<meta name="twitter:description" content="Home">
+<meta name="twitter:description" content="坐标变换世界变换（局部坐标系转换到世界坐标系）缩放D3DXMATRIX scale;//缩放矩阵（把生成的缩放矩阵存到矩阵变量中，x，y，z）D3DXMatrixScaling(&amp;amp;scale, 2, 1, 1);//设置变换（世界矩阵变换类型，和参数1矩阵右乘的矩阵）g_pd3dDevice-&amp;gt;SetTransform(D3DTS_WORLD,&amp;amp;scale);
+
+旋转D3DX">
+<meta name="twitter:image" content="https://2324268086.github.io/img/directx初第六卷1.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -160,13 +172,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
+                        <li>Menu</li>
+                        <li>Tags</li>
                         
-                        <li>友情链接</li>
+                        <li>Friends</li>
                         
                         
-                        <li>关于我</li>
+                        <li>About Me</li>
                         
                     </ul>
                 </div>
@@ -278,7 +290,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
       <div class="body-wrap"><article id="post-directx初第六卷" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -325,7 +337,20 @@
 	
       
           
-        
+        <h2 id="坐标变换"><a href="#坐标变换" class="headerlink" title="坐标变换"></a>坐标变换</h2><h3 id="世界变换（局部坐标系转换到世界坐标系）"><a href="#世界变换（局部坐标系转换到世界坐标系）" class="headerlink" title="世界变换（局部坐标系转换到世界坐标系）"></a>世界变换（局部坐标系转换到世界坐标系）</h3><p><code>缩放</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">D3DXMATRIX scale;</span><br><span class="line"><span class="comment">//缩放矩阵（把生成的缩放矩阵存到矩阵变量中，x，y，z）</span></span><br><span class="line">D3DXMatrixScaling(&amp;scale, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line"><span class="comment">//设置变换（世界矩阵变换类型，和参数1矩阵右乘的矩阵）</span></span><br><span class="line">g_pd3dDevice-&gt;SetTransform(D3DTS_WORLD,&amp;scale);</span><br></pre></td></tr></table></figure></p>
+<p><img src="/img/directx初第六卷1.png" alt=""></p>
+<p><code>旋转</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">D3DXMATRIX rotation;</span><br><span class="line"><span class="comment">//角度=45弧度*（π/180）</span></span><br><span class="line"><span class="keyword">float</span> angle = <span class="number">45</span> * (D3DX_PI / <span class="number">180</span>);</span><br><span class="line"><span class="comment">//Y轴旋转矩阵（把生成的旋转矩阵存到矩阵变量中，角度）</span></span><br><span class="line">D3DXMatrixRotationY(&amp;rotation, angle);</span><br><span class="line">g_pd3dDevice-&gt;SetTransform(D3DTS_WORLD, &amp;rotation);</span><br></pre></td></tr></table></figure></p>
+<p><img src="/img/directx初第六卷2.png" alt=""></p>
+<p><code>平移</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">D3DXMATRIX trans;</span><br><span class="line"><span class="comment">//平移矩阵（把生成的平移矩阵存到矩阵变量中，x，y，z）</span></span><br><span class="line">D3DXMatrixTranslation(&amp;trans,<span class="number">0</span>,<span class="number">2</span>,<span class="number">0</span>);</span><br><span class="line">g_pd3dDevice-&gt;SetTransform(D3DTS_WORLD, &amp;trans);</span><br></pre></td></tr></table></figure></p>
+<p><img src="/img/directx初第六卷3.png" alt=""></p>
+<p><code>抱团开雾</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">D3DXMATRIX world, scale, rotation, trans;</span><br><span class="line">	</span><br><span class="line">D3DXMatrixScaling(&amp;scale, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">float</span> angle = <span class="number">45</span> * (D3DX_PI / <span class="number">180</span>);</span><br><span class="line">D3DXMatrixRotationY(&amp;rotation, angle);</span><br><span class="line"><span class="comment">//矩阵相乘（把结果矩阵存到矩阵变量中，左乘矩阵，右乘矩阵），顺序为：1缩2旋3平</span></span><br><span class="line">D3DXMatrixMultiply(&amp;world, &amp;scale, &amp;rotation);</span><br><span class="line"></span><br><span class="line">D3DXMatrixTranslation(&amp;trans, <span class="number">0</span>, <span class="number">2</span>, <span class="number">0</span>);</span><br><span class="line">D3DXMatrixMultiply(&amp;world, &amp;world, &amp;trans);</span><br><span class="line"></span><br><span class="line">g_pd3dDevice-&gt;SetTransform(D3DTS_WORLD, &amp;world);</span><br></pre></td></tr></table></figure></p>
+<p><img src="/img/directx初第六卷4.png" alt=""></p>
+<h3 id="取景变换（设置摄像机位置）"><a href="#取景变换（设置摄像机位置）" class="headerlink" title="取景变换（设置摄像机位置）"></a>取景变换（设置摄像机位置）</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">D3DXVECTOR3 <span class="title">position</span><span class="params">(<span class="number">0</span>, <span class="number">0</span>, <span class="number">-5</span>)</span></span>;</span><br><span class="line"><span class="function">D3DXVECTOR3 <span class="title">target</span><span class="params">(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line"><span class="function">D3DXVECTOR3 <span class="title">up</span><span class="params">(<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">D3DXMATRIX v;</span><br><span class="line"><span class="comment">//生成取景变换矩阵（把生成的观察矩阵存到矩阵变量中，摄像机在世界坐标系位置，观察点在世界坐标系的位置，摄像机up向量）</span></span><br><span class="line">D3DXMatrixLookAtLH(&amp;v, &amp;position, &amp;target, &amp;up);</span><br><span class="line">g_pd3dDevice-&gt;SetTransform(D3DTS_VIEW, &amp;v);</span><br></pre></td></tr></table></figure>
+<h3 id="投影变换（三维物体投影到二维的屏幕上）"><a href="#投影变换（三维物体投影到二维的屏幕上）" class="headerlink" title="投影变换（三维物体投影到二维的屏幕上）"></a>投影变换（三维物体投影到二维的屏幕上）</h3><p><code>视截体</code>：虚拟摄像机与投影窗口组成的三维空间</p>
+<p><code>裁剪</code>：位于视截体内的物体会被投影到二维平面，而位于视截体外的物体将不会被显示<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">D3DXMATRIX proj;</span><br><span class="line"><span class="comment">//生成视截体（把生成的投影变换矩阵存到矩阵变量中，视域角度（摄像机在y轴的成像角度），宽，高，近裁剪面距（摄像机离最近裁剪平面距离），远裁剪面距）</span></span><br><span class="line">D3DXMatrixPerspectiveFovLH(&amp;proj, D3DX_PI*<span class="number">.5</span>f, (<span class="keyword">float</span>)<span class="number">640</span> / (<span class="keyword">float</span>)<span class="number">480</span>, <span class="number">1</span>, <span class="number">1000</span>);</span><br><span class="line">g_pd3dDevice-&gt;SetTransform(D3DTS_PROJECTION, &amp;proj);</span><br></pre></td></tr></table></figure></p>
+<h3 id="视口变换（设置显示区域）"><a href="#视口变换（设置显示区域）" class="headerlink" title="视口变换（设置显示区域）"></a>视口变换（设置显示区域）</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//视口结构体（x，y，宽度，高度，最小深度，最大深度）</span></span><br><span class="line">D3DVIEWPORT9 vp = &#123; <span class="number">0</span>, <span class="number">0</span>, <span class="number">600</span>, <span class="number">400</span>, <span class="number">0</span>, <span class="number">1</span> &#125;;</span><br><span class="line">g_pd3dDevice-&gt;SetViewport(&amp;vp);</span><br></pre></td></tr></table></figure>
+<p><img src="/img/directx初第六卷5.png" alt=""></p>
+
       
     </div>
     
@@ -333,17 +358,17 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/01/31/directx初第六卷/">directx初第六卷</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">小贱</a></p>
-        <p><span>发布时间:</span>2017-01-31, 10:59:09</p>
-        <p><span>最后更新:</span>2017-01-31, 12:37:09</p>
+        <p><span>Title:</span><a href="/2017/01/31/directx初第六卷/">directx初第六卷</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">小贱</a></p>
+        <p><span>Created:</span>2017-01-31, 10:59:09</p>
+        <p><span>Updated:</span>2017-01-31, 17:42:47</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/01/31/directx初第六卷/" title="directx初第六卷">https://2324268086.github.io/2017/01/31/directx初第六卷/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://2324268086.github.io/2017/01/31/directx初第六卷/　　作者: 小贱" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2017/01/31/directx初第六卷/" title="directx初第六卷">https://2324268086.github.io/2017/01/31/directx初第六卷/</a>
+            <span class="copy-path" data-clipboard-text="From https://2324268086.github.io/2017/01/31/directx初第六卷/　　By 小贱" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
         </p>
     </div>
 
@@ -364,9 +389,9 @@
 </article>
 
     <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
+        <strong class="toc-title">Contents</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#坐标变换"><span class="toc-number">1.</span> <span class="toc-text">坐标变换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#世界变换（局部坐标系转换到世界坐标系）"><span class="toc-number">1.1.</span> <span class="toc-text">世界变换（局部坐标系转换到世界坐标系）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#取景变换（设置摄像机位置）"><span class="toc-number">1.2.</span> <span class="toc-text">取景变换（设置摄像机位置）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#投影变换（三维物体投影到二维的屏幕上）"><span class="toc-number">1.3.</span> <span class="toc-text">投影变换（三维物体投影到二维的屏幕上）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#视口变换（设置显示区域）"><span class="toc-number">1.4.</span> <span class="toc-text">视口变换（设置显示区域）</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -380,10 +405,10 @@
         }
     </style>
 
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
 
     <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
     </script>
 
 
@@ -429,13 +454,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
 
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/01/30/directx初第五卷/" title="下一篇: directx初第五卷">
+            <a href="/2017/01/30/directx初第五卷/" title="Next: directx初第五卷">
                 <i class="fa fa-angle-right"></i>
             </a>
         
@@ -466,7 +491,7 @@
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -475,7 +500,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -508,9 +533,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window

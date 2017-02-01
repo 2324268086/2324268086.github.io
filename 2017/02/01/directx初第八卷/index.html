@@ -16,16 +16,16 @@
 <meta name="360-site-verification" content="43cf0a0142f73cd99905003b02004055" />
 
 
-<meta name="description" content="Home">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="https://2324268086.github.io/about/index.html">
+<meta name="description" content="材质创建几何体通过顶点缓存和索引缓存">
+<meta property="og:type" content="article">
+<meta property="og:title" content="directx初第八卷">
+<meta property="og:url" content="https://2324268086.github.io/2017/02/01/directx初第八卷/index.html">
 <meta property="og:site_name" content="小贱's Blog">
-<meta property="og:description" content="Home">
-<meta property="og:updated_time" content="2017-01-27T00:14:20.758Z">
+<meta property="og:description" content="材质创建几何体通过顶点缓存和索引缓存">
+<meta property="og:updated_time" content="2017-02-01T06:19:24.733Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="Home">
+<meta name="twitter:title" content="directx初第八卷">
+<meta name="twitter:description" content="材质创建几何体通过顶点缓存和索引缓存">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>about | 小贱&#39;s Blog</title>
+<title>directx初第八卷 | 小贱&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -67,7 +67,7 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -280,11 +280,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-directx初第八卷" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/about/index.html" class="article-date">
-      <time datetime="2017-01-27T00:14:20.000Z" itemprop="datePublished">2017-01-27</time>
+      <a href="/2017/02/01/directx初第八卷/" class="article-date">
+      <time datetime="2017-02-01T03:52:03.000Z" itemprop="datePublished">2017-02-01</time>
 </a>
 
 
@@ -299,7 +299,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      about
+      directx初第八卷
     </h1>
   
 
@@ -307,8 +307,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/directx总结/">directx总结</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/directx/">directx</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -317,36 +325,69 @@
 	
       
           
-              <style>
-    .article-meta { display: none; }
-    #container .article .article-title { padding-right: 0; }
-    .article-header {
-        padding: 0;
-        padding-top: 26px;
-        border-left: none;
-        text-align: center;
-    }
-    .article-header:hover { border-left: none; }
-    .article-title { font-size: 1.6em }
-    .article-entry hr { margin: 0;}
-    .article-meta,
-    #container .article-info-post.article-info { display: none;}
-    #container .article .article-title { padding: 0; }
-</style>
-
-
-          
-        
+        <h2 id="材质"><a href="#材质" class="headerlink" title="材质"></a>材质</h2><h3 id="创建几何体"><a href="#创建几何体" class="headerlink" title="创建几何体"></a>创建几何体</h3><p><code>通过顶点缓存和索引缓存</code><br><a id="more"></a><br>请看前面的章节</p>
+<p><code>通过内置几何体</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">ID3DXMesh* mesh;</span><br><span class="line"><span class="comment">//创建立方体（设备指针，宽度，高度，深度，把结果存到网格指针，无三角形索引指针）</span></span><br><span class="line">D3DXCreateBox(g_pd3dDevice, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, &amp;mesh, <span class="number">0</span>);</span><br><span class="line"><span class="comment">//创建茶壶（设备指针，把结果存到网格指针，无三角形索引指针）</span></span><br><span class="line">D3DXCreateTeapot(g_pd3dDevice, &amp;mesh, <span class="number">0</span>);</span><br><span class="line"><span class="comment">//创建柱体（设备指针，z轴负方向半径，z轴正方向半径，高度，柱体外围面数，柱体两端间段数，把结果存到网格指针，无三角形索引指针）</span></span><br><span class="line">D3DXCreateCylinder(g_pd3dDevice, <span class="number">.5</span>f, <span class="number">.5</span>f, <span class="number">2</span>, <span class="number">20</span>, <span class="number">20</span>, &amp;mesh, <span class="number">0</span>);</span><br><span class="line"><span class="comment">//创建圆环体（设备指针，内圈半径，外圈半径，外圈面数，内圈与外圈之间面数，把结果存到网格指针，无三角形索引指针）</span></span><br><span class="line">D3DXCreateTorus(g_pd3dDevice, <span class="number">0.5f</span>, <span class="number">1</span>, <span class="number">20</span>, <span class="number">20</span>, &amp;mesh, <span class="number">0</span>);</span><br><span class="line"><span class="comment">//创建球面体（设备指针，每条边长度，经线数，纬线数，把结果存到网格指针，无三角形索引指针）</span></span><br><span class="line">D3DXCreateSphere(g_pd3dDevice, <span class="number">1</span>, <span class="number">20</span>, <span class="number">20</span>, &amp;mesh, <span class="number">0</span>);</span><br><span class="line"><span class="comment">//创建2d多边形（设备指针，每条边长度，三角形数，把结果存到网格指针，无三角形索引指针）</span></span><br><span class="line">D3DXCreatePolygon(g_pd3dDevice, <span class="number">2.0</span>, <span class="number">3</span>, &amp;mesh, <span class="number">0</span>);</span><br><span class="line"><span class="comment">//绘制网格</span></span><br><span class="line">mesh-&gt;DrawSubset(<span class="number">0</span>);</span><br></pre></td></tr></table></figure></p>
+<p><code>通过导入模型</code><br>以后再详细说明</p>
+<h3 id="设置材质"><a href="#设置材质" class="headerlink" title="设置材质"></a>设置材质</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//填充材质结构</span></span><br><span class="line">D3DMATERIAL9 mtrl;</span><br><span class="line">mtrl.Ambient = (D3DXCOLOR)D3DCOLOR_XRGB(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>); <span class="comment">//环境光颜色值</span></span><br><span class="line">mtrl.Diffuse = (D3DXCOLOR)D3DCOLOR_XRGB(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>); <span class="comment">//漫反射光颜色值</span></span><br><span class="line">mtrl.Specular = (D3DXCOLOR)D3DCOLOR_XRGB(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>); <span class="comment">//镜面反射光颜色值</span></span><br><span class="line">mtrl.Power = <span class="number">2</span>; <span class="comment">//镜面反射指数</span></span><br><span class="line">mtrl.Emissive = (D3DXCOLOR)D3DCOLOR_XRGB(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>); <span class="comment">//自发光颜色值</span></span><br><span class="line"><span class="comment">//设置材质</span></span><br><span class="line">g_pd3dDevice-&gt;SetMaterial(&amp;mtrl);</span><br></pre></td></tr></table></figure>
       
     </div>
     
   </div>
   
     
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/02/01/directx初第八卷/">directx初第八卷</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">小贱</a></p>
+        <p><span>发布时间:</span>2017-02-01, 11:52:03</p>
+        <p><span>最后更新:</span>2017-02-01, 14:19:24</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/02/01/directx初第八卷/" title="directx初第八卷">https://2324268086.github.io/2017/02/01/directx初第八卷/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://2324268086.github.io/2017/02/01/directx初第八卷/　　作者: 小贱" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
 
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/01/31/directx初第七卷/">
+                    directx初第七卷
+                </a>
+            </div>
+        
+    </nav>
 
   
 </article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#材质"><span class="toc-number">1.</span> <span class="toc-text">材质</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建几何体"><span class="toc-number">1.1.</span> <span class="toc-text">创建几何体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置材质"><span class="toc-number">1.2.</span> <span class="toc-text">设置材质</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
 
 
 
@@ -368,7 +409,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="about/index.html" data-title="about" data-url="https://2324268086.github.io/about/index.html"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/02/01/directx初第八卷/" data-title="directx初第八卷" data-url="https://2324268086.github.io/2017/02/01/directx初第八卷/"></div>
     <script>
         var duoshuoQuery = {short_name:"2324268086"};
         var loadComment = function(){
@@ -386,6 +427,24 @@
 </div>
     
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/01/31/directx初第七卷/" title="下一篇: directx初第七卷">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/01/directx初第八卷/">directx初第八卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/31/directx初第七卷/">directx初第七卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/31/directx初第六卷/">directx初第六卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/30/directx初第五卷/">directx初第五卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/30/directx初第四卷/">directx初第四卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/30/directx初第三卷/">directx初第三卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/29/directx初第二卷/">directx初第二卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/29/directx初第一卷/">directx初第一卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/28/directx数学基础2/">directx数学基础2</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/28/directx数学基础/">directx数学基础1</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/28/directx前言/">directx前言</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/26/hello-world/">Hello World</a></li></ul>
 
 
 

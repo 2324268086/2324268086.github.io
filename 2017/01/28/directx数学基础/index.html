@@ -77,7 +77,12 @@
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-
+<script>
+(function(){
+   var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?c89dcbd4457224a5346b7aeaeb47587e":"https://jspassport.ssl.qhimg.com/11.0.1.js?c89dcbd4457224a5346b7aeaeb47587e";
+   document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
 <script>
     var yiliaConfig = {
         fancybox: true,

@@ -16,16 +16,16 @@
 <meta name="360-site-verification" content="43cf0a0142f73cd99905003b02004055" />
 
 
-<meta name="description" content="材质创建几何体通过顶点缓存和索引缓存">
+<meta name="description" content="混合alpha混合//开启alpha混合g_pd3dDevice-&amp;gt;SetRenderState(D3DRS_ALPHABLENDENABLE, true);//设置融合因子g_pd3dDevice-&amp;gt;SetRenderState(D3DRS_SRCBLEND, D3DBLEND_SRCALPHA);g_pd3dDevice-&amp;gt;SetRenderState(D3DRS_DESTB">
 <meta property="og:type" content="article">
-<meta property="og:title" content="directx初第八卷">
-<meta property="og:url" content="https://2324268086.github.io/2017/02/01/directx初第八卷/index.html">
+<meta property="og:title" content="directx初第十卷">
+<meta property="og:url" content="https://2324268086.github.io/2017/02/10/directx初第十卷/index.html">
 <meta property="og:site_name" content="小贱's Blog">
-<meta property="og:description" content="材质创建几何体通过顶点缓存和索引缓存">
-<meta property="og:updated_time" content="2017-02-01T06:19:24.733Z">
+<meta property="og:description" content="混合alpha混合//开启alpha混合g_pd3dDevice-&amp;gt;SetRenderState(D3DRS_ALPHABLENDENABLE, true);//设置融合因子g_pd3dDevice-&amp;gt;SetRenderState(D3DRS_SRCBLEND, D3DBLEND_SRCALPHA);g_pd3dDevice-&amp;gt;SetRenderState(D3DRS_DESTB">
+<meta property="og:updated_time" content="2017-02-10T07:00:50.285Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="directx初第八卷">
-<meta name="twitter:description" content="材质创建几何体通过顶点缓存和索引缓存">
+<meta name="twitter:title" content="directx初第十卷">
+<meta name="twitter:description" content="混合alpha混合//开启alpha混合g_pd3dDevice-&amp;gt;SetRenderState(D3DRS_ALPHABLENDENABLE, true);//设置融合因子g_pd3dDevice-&amp;gt;SetRenderState(D3DRS_SRCBLEND, D3DBLEND_SRCALPHA);g_pd3dDevice-&amp;gt;SetRenderState(D3DRS_DESTB">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>directx初第八卷 | 小贱&#39;s Blog</title>
+<title>directx初第十卷 | 小贱&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -285,11 +285,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-directx初第八卷" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-directx初第十卷" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/02/01/directx初第八卷/" class="article-date">
-      <time datetime="2017-02-01T03:52:03.000Z" itemprop="datePublished">2017-02-01</time>
+      <a href="/2017/02/10/directx初第十卷/" class="article-date">
+      <time datetime="2017-02-10T05:01:32.000Z" itemprop="datePublished">2017-02-10</time>
 </a>
 
 
@@ -304,7 +304,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      directx初第八卷
+      directx初第十卷
     </h1>
   
 
@@ -330,10 +330,11 @@
 	
       
           
-        <h2 id="材质"><a href="#材质" class="headerlink" title="材质"></a>材质</h2><h3 id="创建几何体"><a href="#创建几何体" class="headerlink" title="创建几何体"></a>创建几何体</h3><p><code>通过顶点缓存和索引缓存</code><br><a id="more"></a><br>请看前面的章节</p>
-<p><code>通过内置几何体</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">ID3DXMesh* mesh;</span><br><span class="line"><span class="comment">//创建立方体（设备指针，宽度，高度，深度，把结果存到网格指针，无三角形索引指针）</span></span><br><span class="line">D3DXCreateBox(g_pd3dDevice, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, &amp;mesh, <span class="number">0</span>);</span><br><span class="line"><span class="comment">//创建茶壶（设备指针，把结果存到网格指针，无三角形索引指针）</span></span><br><span class="line">D3DXCreateTeapot(g_pd3dDevice, &amp;mesh, <span class="number">0</span>);</span><br><span class="line"><span class="comment">//创建柱体（设备指针，z轴负方向半径，z轴正方向半径，高度，柱体外围面数，柱体两端间段数，把结果存到网格指针，无三角形索引指针）</span></span><br><span class="line">D3DXCreateCylinder(g_pd3dDevice, <span class="number">.5</span>f, <span class="number">.5</span>f, <span class="number">2</span>, <span class="number">20</span>, <span class="number">20</span>, &amp;mesh, <span class="number">0</span>);</span><br><span class="line"><span class="comment">//创建圆环体（设备指针，内圈半径，外圈半径，外圈面数，内圈与外圈之间面数，把结果存到网格指针，无三角形索引指针）</span></span><br><span class="line">D3DXCreateTorus(g_pd3dDevice, <span class="number">0.5f</span>, <span class="number">1</span>, <span class="number">20</span>, <span class="number">20</span>, &amp;mesh, <span class="number">0</span>);</span><br><span class="line"><span class="comment">//创建球面体（设备指针，每条边长度，经线数，纬线数，把结果存到网格指针，无三角形索引指针）</span></span><br><span class="line">D3DXCreateSphere(g_pd3dDevice, <span class="number">1</span>, <span class="number">20</span>, <span class="number">20</span>, &amp;mesh, <span class="number">0</span>);</span><br><span class="line"><span class="comment">//创建2d多边形（设备指针，每条边长度，三角形数，把结果存到网格指针，无三角形索引指针）</span></span><br><span class="line">D3DXCreatePolygon(g_pd3dDevice, <span class="number">2.0</span>, <span class="number">3</span>, &amp;mesh, <span class="number">0</span>);</span><br><span class="line"><span class="comment">//绘制网格</span></span><br><span class="line">mesh-&gt;DrawSubset(<span class="number">0</span>);</span><br></pre></td></tr></table></figure></p>
-<p><code>通过导入模型</code><br>以后再详细说明</p>
-<h3 id="设置材质"><a href="#设置材质" class="headerlink" title="设置材质"></a>设置材质</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//填充材质结构</span></span><br><span class="line">D3DMATERIAL9 mtrl;</span><br><span class="line">mtrl.Ambient = (D3DXCOLOR)D3DCOLOR_XRGB(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>); <span class="comment">//环境光颜色值</span></span><br><span class="line">mtrl.Diffuse = (D3DXCOLOR)D3DCOLOR_XRGB(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>); <span class="comment">//漫反射光颜色值</span></span><br><span class="line">mtrl.Specular = (D3DXCOLOR)D3DCOLOR_XRGB(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>); <span class="comment">//镜面反射光颜色值</span></span><br><span class="line">mtrl.Power = <span class="number">2</span>; <span class="comment">//镜面反射指数</span></span><br><span class="line">mtrl.Emissive = (D3DXCOLOR)D3DCOLOR_XRGB(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>); <span class="comment">//自发光颜色值</span></span><br><span class="line"><span class="comment">//设置材质</span></span><br><span class="line">g_pd3dDevice-&gt;SetMaterial(&amp;mtrl);</span><br></pre></td></tr></table></figure>
+        <h2 id="混合"><a href="#混合" class="headerlink" title="混合"></a>混合</h2><h3 id="alpha混合"><a href="#alpha混合" class="headerlink" title="alpha混合"></a>alpha混合</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//开启alpha混合</span></span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_ALPHABLENDENABLE, <span class="literal">true</span>);</span><br><span class="line"><span class="comment">//设置融合因子</span></span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_SRCBLEND, D3DBLEND_SRCALPHA);</span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_DESTBLEND, D3DBLEND_INVSRCALPHA);</span><br><span class="line"><span class="comment">//（设置融合方式，像素相加）默认为相加，可以不写此句</span></span><br><span class="line">g_pd3dDevice-&gt;SetRenderState(D3DRS_BLENDOP, D3DBLENDOP_ADD);</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="指定alpha资源"><a href="#指定alpha资源" class="headerlink" title="指定alpha资源"></a>指定alpha资源</h3><p><code>从顶点颜色获得</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">g_pd3dDevice-&gt;SetTextureStageState(<span class="number">0</span>, D3DTSS_ALPHAARG1, D3DTA_DIFFUSE);</span><br><span class="line">g_pd3dDevice-&gt;SetTextureStageState(<span class="number">0</span>, D3DTSS_ALPHAOP, D3DTOP_SELECTARG1);</span><br></pre></td></tr></table></figure></p>
+<p><code>从带alpha通道的纹理获得</code><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">g_pd3dDevice-&gt;SetTextureStageState(<span class="number">0</span>, D3DTSS_ALPHAARG1, D3DTA_TEXTURE);</span><br><span class="line">g_pd3dDevice-&gt;SetTextureStageState(<span class="number">0</span>, D3DTSS_ALPHAOP, D3DTOP_SELECTARG1);</span><br></pre></td></tr></table></figure></p>
+<h3 id="其实指定不指定一个卵样-（个人感觉）"><a href="#其实指定不指定一个卵样-（个人感觉）" class="headerlink" title="其实指定不指定一个卵样~（个人感觉）"></a>其实指定不指定一个卵样~（个人感觉）</h3>
       
     </div>
     
@@ -341,13 +342,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/02/01/directx初第八卷/">directx初第八卷</a></p>
+        <p><span>本文标题:</span><a href="/2017/02/10/directx初第十卷/">directx初第十卷</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">小贱</a></p>
-        <p><span>发布时间:</span>2017-02-01, 11:52:03</p>
-        <p><span>最后更新:</span>2017-02-01, 14:19:24</p>
+        <p><span>发布时间:</span>2017-02-10, 13:01:32</p>
+        <p><span>最后更新:</span>2017-02-10, 15:00:50</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/02/01/directx初第八卷/" title="directx初第八卷">https://2324268086.github.io/2017/02/01/directx初第八卷/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://2324268086.github.io/2017/02/01/directx初第八卷/　　作者: 小贱" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/02/10/directx初第十卷/" title="directx初第十卷">https://2324268086.github.io/2017/02/10/directx初第十卷/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://2324268086.github.io/2017/02/10/directx初第十卷/　　作者: 小贱" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -359,16 +360,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/02/01/directx初第九卷/">
-                    directx初第九卷
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/01/31/directx初第七卷/">
-                    directx初第七卷
+                <a href="/2017/02/01/directx初第九卷/">
+                    directx初第九卷
                 </a>
             </div>
         
@@ -380,7 +375,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#材质"><span class="toc-number">1.</span> <span class="toc-text">材质</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建几何体"><span class="toc-number">1.1.</span> <span class="toc-text">创建几何体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置材质"><span class="toc-number">1.2.</span> <span class="toc-text">设置材质</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#混合"><span class="toc-number">1.</span> <span class="toc-text">混合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#alpha混合"><span class="toc-number">1.1.</span> <span class="toc-text">alpha混合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#指定alpha资源"><span class="toc-number">1.2.</span> <span class="toc-text">指定alpha资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其实指定不指定一个卵样-（个人感觉）"><span class="toc-number">1.3.</span> <span class="toc-text">其实指定不指定一个卵样~（个人感觉）</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -420,7 +415,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/02/01/directx初第八卷/" data-title="directx初第八卷" data-url="https://2324268086.github.io/2017/02/01/directx初第八卷/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/02/10/directx初第十卷/" data-title="directx初第十卷" data-url="https://2324268086.github.io/2017/02/10/directx初第十卷/"></div>
     <script>
         var duoshuoQuery = {short_name:"2324268086"};
         var loadComment = function(){
@@ -443,15 +438,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/02/01/directx初第九卷/" title="上一篇: directx初第九卷">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/01/31/directx初第七卷/" title="下一篇: directx初第七卷">
+            <a href="/2017/02/01/directx初第九卷/" title="下一篇: directx初第九卷">
                 <i class="fa fa-angle-right"></i>
             </a>
         

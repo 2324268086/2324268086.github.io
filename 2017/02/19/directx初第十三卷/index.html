@@ -16,15 +16,18 @@
 <meta name="360-site-verification" content="43cf0a0142f73cd99905003b02004055" />
 
 
-<meta name="description" content="Home">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小贱's Blog">
-<meta property="og:url" content="https://2324268086.github.io/archives/2017/page/2/index.html">
+<meta name="description" content="Shadow声明变量ID3DXMesh* mesh;ID3DXMesh* wall;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="directx初第十三卷">
+<meta property="og:url" content="https://2324268086.github.io/2017/02/19/directx初第十三卷/index.html">
 <meta property="og:site_name" content="小贱's Blog">
-<meta property="og:description" content="Home">
+<meta property="og:description" content="Shadow声明变量ID3DXMesh* mesh;ID3DXMesh* wall;">
+<meta property="og:image" content="https://2324268086.github.io/img/directx初第十三卷1.png">
+<meta property="og:updated_time" content="2017-02-19T11:06:09.368Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小贱's Blog">
-<meta name="twitter:description" content="Home">
+<meta name="twitter:title" content="directx初第十三卷">
+<meta name="twitter:description" content="Shadow声明变量ID3DXMesh* mesh;ID3DXMesh* wall;">
+<meta name="twitter:image" content="https://2324268086.github.io/img/directx初第十三卷1.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +59,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Archives: 2017 | 小贱&#39;s Blog</title>
+<title>directx初第十三卷 | 小贱&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -71,8 +74,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -284,389 +287,181 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-directx初第十三卷" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2017/02/19/directx初第十三卷/" class="article-date">
+      <time datetime="2017-02-19T09:21:36.000Z" itemprop="datePublished">2017-02-19</time>
+</a>
+
+
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      directx初第十三卷
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/directx总结/">directx总结</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/directx/">directx</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/01/31/directx初第六卷/" class="archive-article-date">
-      <time datetime="2017-01-31T02:59:09.000Z" itemprop="datePublished">01-31</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/31/directx初第六卷/">directx初第六卷</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
+    <div class="article-entry" itemprop="articleBody">
+	
+      
           
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/directx总结/">directx总结</a>
+        <h2 id="Shadow"><a href="#Shadow" class="headerlink" title="Shadow"></a>Shadow</h2><p>声明变量<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">ID3DXMesh* mesh;</span><br><span class="line">ID3DXMesh* wall;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>开启深度缓存<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">不再赘述</span><br></pre></td></tr></table></figure></p>
+<p>绘制场景<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">D3DXMATRIX T;</span><br><span class="line">D3DXMatrixTranslation(&amp;T, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">g_pd3dDevice-&gt;SetTransform(D3DTS_WORLD, &amp;T);</span><br><span class="line">g_pd3dDevice-&gt;SetMaterial(&amp;red_mtrl);</span><br><span class="line">mesh-&gt;DrawSubset(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">D3DXMatrixTranslation(&amp;T, <span class="number">0</span>, <span class="number">-0.5</span>f, <span class="number">0</span>);</span><br><span class="line">g_pd3dDevice-&gt;SetTransform(D3DTS_WORLD, &amp;T);</span><br><span class="line">g_pd3dDevice-&gt;SetMaterial(&amp;white_mtrl);</span><br><span class="line">wall-&gt;DrawSubset(<span class="number">0</span>);</span><br></pre></td></tr></table></figure></p>
+<p>绘制阴影<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//光的位置</span></span><br><span class="line"><span class="function">D3DXVECTOR4 <span class="title">lightDirection</span><span class="params">(<span class="number">1</span>, <span class="number">-1</span>, <span class="number">0</span>, <span class="number">0.0f</span>)</span></span>;</span><br><span class="line"><span class="function">D3DXPLANE <span class="title">groundPlane</span><span class="params">(<span class="number">0.0f</span>, <span class="number">-1.0</span>f, <span class="number">0.0f</span>, <span class="number">0.0f</span>)</span></span>;</span><br><span class="line">D3DXMATRIX S;</span><br><span class="line"><span class="comment">//计算阴影位置</span></span><br><span class="line">D3DXMatrixShadow(&amp;S, &amp;lightDirection, &amp;groundPlane);</span><br><span class="line"><span class="comment">//物体平移位置</span></span><br><span class="line">D3DXMatrixTranslation(&amp;T, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">D3DXMATRIX W = T * S;</span><br><span class="line">g_pd3dDevice-&gt;SetTransform(D3DTS_WORLD, &amp;W);</span><br><span class="line"></span><br><span class="line">D3DMATERIAL9 mtrl = InitMatrix(Black, Black, Black, Black, <span class="number">0.0f</span>);</span><br><span class="line">mtrl.Diffuse.a = <span class="number">0.5f</span>; </span><br><span class="line">g_pd3dDevice-&gt;SetMaterial(&amp;mtrl);</span><br><span class="line">mesh-&gt;DrawSubset(<span class="number">0</span>);</span><br></pre></td></tr></table></figure></p>
+<p>效果<br><img src="/img/directx初第十三卷1.png" alt=""></p>
+
+      
     </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/directx/">directx</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+    
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/01/30/directx初第五卷/" class="archive-article-date">
-      <time datetime="2017-01-30T12:48:43.000Z" itemprop="datePublished">01-30</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/30/directx初第五卷/">directx初第五卷</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/directx总结/">directx总结</a>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/02/19/directx初第十三卷/">directx初第十三卷</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">小贱</a></p>
+        <p><span>发布时间:</span>2017-02-19, 17:21:36</p>
+        <p><span>最后更新:</span>2017-02-19, 19:06:09</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/02/19/directx初第十三卷/" title="directx初第十三卷">https://2324268086.github.io/2017/02/19/directx初第十三卷/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://2324268086.github.io/2017/02/19/directx初第十三卷/　　作者: 小贱" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
 
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/directx/">directx</a></li></ul>
-    </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/01/30/directx初第四卷/" class="archive-article-date">
-      <time datetime="2017-01-30T08:42:42.000Z" itemprop="datePublished">01-30</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/30/directx初第四卷/">directx初第四卷</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/directx总结/">directx总结</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/directx/">directx</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/01/30/directx初第三卷/" class="archive-article-date">
-      <time datetime="2017-01-30T05:39:24.000Z" itemprop="datePublished">01-30</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/30/directx初第三卷/">directx初第三卷</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/directx总结/">directx总结</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/directx/">directx</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/01/29/directx初第二卷/" class="archive-article-date">
-      <time datetime="2017-01-29T13:55:43.000Z" itemprop="datePublished">01-29</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/29/directx初第二卷/">directx初第二卷</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/directx总结/">directx总结</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/directx/">directx</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/01/29/directx初第一卷/" class="archive-article-date">
-      <time datetime="2017-01-29T10:12:55.000Z" itemprop="datePublished">01-29</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/29/directx初第一卷/">directx初第一卷</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/directx总结/">directx总结</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/directx/">directx</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/01/28/directx数学基础2/" class="archive-article-date">
-      <time datetime="2017-01-28T04:11:13.000Z" itemprop="datePublished">01-28</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/28/directx数学基础2/">directx数学基础2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/directx总结/">directx总结</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/directx/">directx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数学/">数学</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/01/28/directx数学基础/" class="archive-article-date">
-      <time datetime="2017-01-28T01:42:53.000Z" itemprop="datePublished">01-28</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/28/directx数学基础/">directx数学基础1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/directx总结/">directx总结</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/directx/">directx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数学/">数学</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/01/28/directx前言/" class="archive-article-date">
-      <time datetime="2017-01-28T01:07:39.000Z" itemprop="datePublished">01-28</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/28/directx前言/">directx前言</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/directx总结/">directx总结</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/directx/">directx</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/01/26/hello-world/" class="archive-article-date">
-      <time datetime="2017-01-26T01:30:01.075Z" itemprop="datePublished">01-26</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/26/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2017/">&laquo; Prev</a><a class="page-number" href="/archives/2017/">1</a><span class="page-number current">2</span>
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/02/19/directx中第三卷/">
+                    directx中第三卷
+                </a>
+            </div>
+        
     </nav>
-  
 
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Shadow"><span class="toc-number">1.</span> <span class="toc-text">Shadow</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+
+    
+        <div class="addthis_sharing_toolbox"></div>
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/02/19/directx初第十三卷/" data-title="directx初第十三卷" data-url="https://2324268086.github.io/2017/02/19/directx初第十三卷/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"2324268086"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = 'https://2324268086.github.io/js/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/02/19/directx中第三卷/" title="下一篇: directx中第三卷">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/19/directx初第十三卷/">directx初第十三卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/19/directx中第三卷/">directx中第三卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/19/directx中第二卷/">directx中第二卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/18/directx中第一卷/">directx中第一卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/11/directx初第十二卷/">directx初第十二卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/10/directx初第十一卷/">directx初第十一卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/10/directx初第十卷/">directx初第十卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/01/directx初第九卷/">directx初第九卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/01/directx初第八卷/">directx初第八卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/31/directx初第七卷/">directx初第七卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/31/directx初第六卷/">directx初第六卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/30/directx初第五卷/">directx初第五卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/30/directx初第四卷/">directx初第四卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/30/directx初第三卷/">directx初第三卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/29/directx初第二卷/">directx初第二卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/29/directx初第一卷/">directx初第一卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/28/directx数学基础2/">directx数学基础2</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/28/directx数学基础/">directx数学基础1</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/28/directx前言/">directx前言</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/26/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">

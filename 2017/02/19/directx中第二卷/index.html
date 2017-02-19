@@ -16,17 +16,17 @@
 <meta name="360-site-verification" content="43cf0a0142f73cd99905003b02004055" />
 
 
-<meta name="description" content="字体、文本2d字体声明变量ID3DXFont* font = 0;">
+<meta name="description" content="字体、文本2D字体声明变量ID3DXFont* font = 0;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="directx中第二卷">
 <meta property="og:url" content="https://2324268086.github.io/2017/02/19/directx中第二卷/index.html">
 <meta property="og:site_name" content="小贱's Blog">
-<meta property="og:description" content="字体、文本2d字体声明变量ID3DXFont* font = 0;">
+<meta property="og:description" content="字体、文本2D字体声明变量ID3DXFont* font = 0;">
 <meta property="og:image" content="https://2324268086.github.io/img/directx中第二卷1.png">
-<meta property="og:updated_time" content="2017-02-19T08:40:53.459Z">
+<meta property="og:updated_time" content="2017-02-19T08:47:09.643Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="directx中第二卷">
-<meta name="twitter:description" content="字体、文本2d字体声明变量ID3DXFont* font = 0;">
+<meta name="twitter:description" content="字体、文本2D字体声明变量ID3DXFont* font = 0;">
 <meta name="twitter:image" content="https://2324268086.github.io/img/directx中第二卷1.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -332,11 +332,11 @@
 	
       
           
-        <h2 id="字体、文本"><a href="#字体、文本" class="headerlink" title="字体、文本"></a>字体、文本</h2><h3 id="2d字体"><a href="#2d字体" class="headerlink" title="2d字体"></a>2d字体</h3><p>声明变量<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">ID3DXFont* font = <span class="number">0</span>;</span><br></pre></td></tr></table></figure></p>
+        <h2 id="字体、文本"><a href="#字体、文本" class="headerlink" title="字体、文本"></a>字体、文本</h2><h3 id="2D字体"><a href="#2D字体" class="headerlink" title="2D字体"></a>2D字体</h3><p>声明变量<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">ID3DXFont* font = <span class="number">0</span>;</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <p>创建字体<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">D3DXCreateFont(g_pd3dDevice, <span class="number">36</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1000</span>, <span class="literal">false</span>, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, DEFAULT_QUALITY, <span class="number">0</span>, <span class="string">"黑体"</span>, &amp;font);</span><br></pre></td></tr></table></figure></p>
 <p>绘制文本<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">RECT rect = &#123; <span class="number">0</span>, <span class="number">0</span>, width, height &#125;;</span><br><span class="line">font-&gt;DrawText(<span class="literal">NULL</span>, TEXT(<span class="string">"xiaojian"</span>), <span class="number">-1</span>, &amp;rect, DT_LEFT | DT_TOP, D3DCOLOR_RGBA(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>));</span><br></pre></td></tr></table></figure></p>
-<h3 id="3d字体"><a href="#3d字体" class="headerlink" title="3d字体"></a>3d字体</h3><p>声明变量<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">ID3DXMesh* Text = <span class="number">0</span>;</span><br></pre></td></tr></table></figure></p>
+<h3 id="3D字体"><a href="#3D字体" class="headerlink" title="3D字体"></a>3D字体</h3><p>声明变量<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">ID3DXMesh* Text = <span class="number">0</span>;</span><br></pre></td></tr></table></figure></p>
 <p>创建字体<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">HDC hdc;</span><br><span class="line">hdc = CreateCompatibleDC(<span class="number">0</span>);</span><br><span class="line">HFONT hfont, hfontold;</span><br><span class="line">LOGFONT lf;</span><br><span class="line">ZeroMemory(&amp;lf, <span class="keyword">sizeof</span>(LOGFONT));</span><br><span class="line">lf.lfHeight = <span class="number">35</span>;</span><br><span class="line">lf.lfWidth = <span class="number">12</span>;</span><br><span class="line">lf.lfCharSet = DEFAULT_CHARSET;</span><br><span class="line">wsprintf(lf.lfFaceName, TEXT(<span class="string">"%s"</span>), TEXT(<span class="string">"黑体"</span>));</span><br><span class="line"></span><br><span class="line">hfont = CreateFontIndirect(&amp;lf);</span><br><span class="line">hfontold = (HFONT)SelectObject(hdc, hfont);</span><br></pre></td></tr></table></figure></p>
 <p>绘制文本<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">D3DXCreateTextW(g_pd3dDevice, hdc, <span class="string">L"小贱"</span>, <span class="number">0.001f</span>, <span class="number">0.4f</span>, &amp;Text, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">SelectObject(hdc, hfontold);</span><br><span class="line">DeleteObject(hfont);</span><br><span class="line">DeleteDC(hdc);</span><br><span class="line"></span><br><span class="line">g_pd3dDevice-&gt;SetMaterial(&amp;white_mtrl);</span><br><span class="line">Text-&gt;DrawSubset(<span class="number">0</span>);</span><br></pre></td></tr></table></figure></p>
 <p>效果<br><img src="/img/directx中第二卷1.png" alt=""></p>
@@ -351,7 +351,7 @@
         <p><span>本文标题:</span><a href="/2017/02/19/directx中第二卷/">directx中第二卷</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">小贱</a></p>
         <p><span>发布时间:</span>2017-02-19, 10:04:05</p>
-        <p><span>最后更新:</span>2017-02-19, 16:40:53</p>
+        <p><span>最后更新:</span>2017-02-19, 16:47:09</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/02/19/directx中第二卷/" title="directx中第二卷">https://2324268086.github.io/2017/02/19/directx中第二卷/</a>
             <span class="copy-path" data-clipboard-text="原文: https://2324268086.github.io/2017/02/19/directx中第二卷/　　作者: 小贱" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -365,6 +365,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/02/19/directx中第三卷/">
+                    directx中第三卷
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -381,7 +387,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#字体、文本"><span class="toc-number">1.</span> <span class="toc-text">字体、文本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2d字体"><span class="toc-number">1.1.</span> <span class="toc-text">2d字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3d字体"><span class="toc-number">1.2.</span> <span class="toc-text">3d字体</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#字体、文本"><span class="toc-number">1.</span> <span class="toc-text">字体、文本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2D字体"><span class="toc-number">1.1.</span> <span class="toc-text">2D字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3D字体"><span class="toc-number">1.2.</span> <span class="toc-text">3D字体</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -444,7 +450,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/02/19/directx中第三卷/" title="上一篇: directx中第三卷">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -456,7 +464,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/19/directx中第二卷/">directx中第二卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/18/directx中第一卷/">directx中第一卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/11/directx初第十二卷/">directx初第十二卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/10/directx初第十一卷/">directx初第十一卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/10/directx初第十卷/">directx初第十卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/01/directx初第九卷/">directx初第九卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/01/directx初第八卷/">directx初第八卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/31/directx初第七卷/">directx初第七卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/31/directx初第六卷/">directx初第六卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/30/directx初第五卷/">directx初第五卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/30/directx初第四卷/">directx初第四卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/30/directx初第三卷/">directx初第三卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/29/directx初第二卷/">directx初第二卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/29/directx初第一卷/">directx初第一卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/28/directx数学基础2/">directx数学基础2</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/28/directx数学基础/">directx数学基础1</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/28/directx前言/">directx前言</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/26/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/19/directx初第十三卷/">directx初第十三卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/19/directx中第三卷/">directx中第三卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/19/directx中第二卷/">directx中第二卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/18/directx中第一卷/">directx中第一卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/11/directx初第十二卷/">directx初第十二卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/10/directx初第十一卷/">directx初第十一卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/10/directx初第十卷/">directx初第十卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/01/directx初第九卷/">directx初第九卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/01/directx初第八卷/">directx初第八卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/31/directx初第七卷/">directx初第七卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/31/directx初第六卷/">directx初第六卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/30/directx初第五卷/">directx初第五卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/30/directx初第四卷/">directx初第四卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/30/directx初第三卷/">directx初第三卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/29/directx初第二卷/">directx初第二卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/29/directx初第一卷/">directx初第一卷</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/28/directx数学基础2/">directx数学基础2</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/28/directx数学基础/">directx数学基础1</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/28/directx前言/">directx前言</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/26/hello-world/">Hello World</a></li></ul>
 
 
 

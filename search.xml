@@ -4,6 +4,12 @@
   
     
     <entry>
+      <title><![CDATA[directx中第五卷]]></title>
+      <url>https://2324268086.github.io/2017/02/22/directx%E4%B8%AD%E7%AC%AC%E4%BA%94%E5%8D%B7/</url>
+      <content type="html"><![CDATA[<h2 id="物体包围盒、位置"><a href="#物体包围盒、位置" class="headerlink" title="物体包围盒、位置"></a>物体包围盒、位置</h2>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[directx中第四卷]]></title>
       <url>https://2324268086.github.io/2017/02/21/directx%E4%B8%AD%E7%AC%AC%E5%9B%9B%E5%8D%B7/</url>
       <content type="html"><![CDATA[<h2 id="渐进网格"><a href="#渐进网格" class="headerlink" title="渐进网格"></a>渐进网格</h2><h3 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">ID3DXPMesh* PMesh = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
